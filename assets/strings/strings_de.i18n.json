@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "kontaktiere uns"
+    },
+    "universal": {
+        "coins": "Gold",
+        "requestError": "Bitte versuchen Sie es später erneut",
+        "add": "Konto hinzufügen"
+    },
+    "tabbar": {
+        "task": "Titelseite",
+        "store": "Geschäft",
+        "setting": "Konfiguration"
+    },
+    "task": {
+        "title": "Titelseite",
+        "skip": "über etwas springen",
+        "follow": "konzentrieren Sie sich auf",
+        "like": "wie",
+        "noTask": "Nicht fragen",
+        "tip": {
+            "title": "Prompt",
+            "values": [
+                "1. Klicken Sie auf $value Schaltfläche",
+                "2. Öffnen $value",
+                "$value. $value",
+                "4. Zurück zu $value",
+                "5. Holen Sie sich Goldmünzen"
+            ],
+            "message": "Wenn Sie Ihre Aufmerksamkeit/Like stornieren, werden Goldmünzen entfernt!"
+        }
+    },
+    "store": {
+        "title": "Geschäft",
+        "free": "frei",
+        "follow": "Anhänger",
+        "like": "wie",
+        "view": "Uhr",
+        "share": "Teilen",
+        "retweet": "Retweet",
+        "ad": {
+            "title": "Werbung Belohnung",
+            "watch": "Sehen Sie sich eine Anzeige an"
+        },
+        "changeAccount": {
+            "title": "Ändern Sie das Konto",
+            "add": "Konto hinzufügen"
+        },
+        "tip": {
+            "follow": {
+                "title": "Follower & Senior Anhänger",
+                "values": [
+                    "",
+                    "Anhänger",
+                    "Senior Anhänger",
+                    "Vollständige Zeit",
+                    "1-24 Stunden",
+                    "1-4 Stunden",
+                    "Ausgleichszeit",
+                    "/",
+                    "Entschädigung innerhalb von 7 Tagen",
+                    "Follower -Qualität",
+                    "real",
+                    "Echt und aktiv",
+                    "Fallgeschwindigkeit",
+                    "8-15%",
+                    "0-3%"
+                ]
+            },
+            "like": {
+                "title": "Wie & fortgeschrittenes Lob",
+                "values": [
+                    "",
+                    "wie",
+                    "Hoch -Level -Lob",
+                    "Vollständige Zeit",
+                    "1-24 Stunden",
+                    "1-4 Stunden",
+                    "Ausgleichszeit",
+                    "/",
+                    "Entschädigung innerhalb von 7 Tagen",
+                    "Fallgeschwindigkeit",
+                    "8-15%",
+                    "0-3%"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Käufer",
+            "like": "Kaufen Sie etwas Lob",
+            "view": "Kaufen und beobachten",
+            "share": "Kaufen und teilen",
+            "retweet": "Kaufen Sie eine Übertragung",
+            "accountPublic": "* Bitte behalten Sie Ihr Konto offen, ist offen",
+            "channelPublic": "* Bitte halten Sie Ihren Kanal offen",
+            "tiktok": "Ihr Tiktok -Videolink",
+            "twitter": "Ihr Twitter -Tweet -Link",
+            "instagram": "Ihr Instagram Post -Link",
+            "youtube": "Ihr YouTube -Kanal -Link",
+            "pay": "Zahlen"
+        },
+        "purchase": {
+            "title": "Bezahlung erfolgreich",
+            "message": "Bitte warten Sie, bis die Bestellung abgeschlossen ist!"
+        },
+        "notice": {
+            "message": "Um $value kostenlose Follower zu erhalten, öffnen Sie zuerst die App -Benachrichtigung.",
+            "turnOn": "Offen"
+        }
+    },
+    "coins": {
+        "empty": "Keine Geschichte"
+    },
+    "login": {
+        "confirm": "bestätigen",
+        "username": "Geben Sie Ihren $value -Benutzernamen ein",
+        "channel": "Geben Sie Ihren YouTube -Kanal -Link ein",
+        "publicUsername": "* Bitte behalten Sie Ihr Konto offen, ist offen",
+        "publicChannel": "* Bitte halten Sie Ihren Kanal offen",
+        "add": "Konto hinzufügen",
+        "hintUsername": "Nutzername",
+        "hintChannel": "Kanallink"
+    },
+    "setting": {
+        "title": "Konfiguration",
+        "editor": "Informationen bearbeiten",
+        "daily": "Einloggen",
+        "wheel": "Schicksalsrad",
+        "account": "Verwaltungskonto",
+        "language": "Sprache",
+        "orders": "Befehl",
+        "faq": "häufiges Problem",
+        "about": "um",
+        "share": {
+            "title": "App teilen",
+            "message": "Ich habe eine Schatzanwendung gefunden, die kostenlose Tiktok -Fans und -vorlagen erhalten kann. Durch die folgende Linkinstallation erhalten wir $value Goldmünzen!"
+        },
+        "rateUs": "Bewerten uns"
+    },
+    "language": {
+        "title": "Wählen Sie eine Sprache",
+        "start": "Anfang"
+    },
+    "daily": {
+        "title": "Einloggen",
+        "checkIn": "Einloggen",
+        "rules": {
+            "title": "Regel",
+            "values": [
+                "Sie können sich alle 24 Stunden anmelden;",
+                "Nach der Unterbrechung des Zeichens wird es erneut beginnen."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Schicksalsrad",
+        "rules": {
+            "title": "Regel",
+            "values": [
+                "Jede Lotterie kostet $value Goldmünzen;",
+                "Die Anzahl der Ziehungen ist nicht begrenzt."
+            ]
+        }
+    },
+    "account": {
+        "title": "Verwaltungskonto",
+        "add": "+ Kontonummer hinzufügen",
+        "empty": "Kein Account",
+        "alert": {
+            "title": "Konto löschen",
+            "message": "Nach dem Löschen können Sie das Konto für verwandte Vorgänge nicht verwenden."
+        }
+    },
+    "orders": {
+        "title": "Befehl",
+        "pending": "Warteschlange",
+        "processing": "wird bearbeitet",
+        "inProgress": "wird bearbeitet",
+        "completed": "abgeschlossen",
+        "partial": "Teilweise Abschluss",
+        "error": "Fehler",
+        "canceled": "Abgesagt",
+        "refunded": "erstattet",
+        "empty": "Keine Bestellung"
+    },
+    "faq": {
+        "title": "häufiges Problem",
+        "values": [
+            {
+                "title": "1. Wie fange ich an?",
+                "value": "Fügen Sie einfach Ihren Plattform -Benutzernamen gemäß den Eingabeaufforderungen hinzu, kein Passwort, jede Plattform verfügt über eine entsprechende Eingabeaufforderung."
+            },
+            {
+                "title": "2. Ist es sicher, es zu verwenden?",
+                "value": "Natürlich ist es sicher. Wir benötigen Ihr Passwort nicht und können Ihre sozialen Anwendungsdaten nicht speichern, da sie in die offizielle Anwendung springen, um auf andere Dinge zu achten oder auf andere Dinge zu tun."
+            },
+            {
+                "title": "3. Wie funktioniert das alles?",
+                "value": "Die Arbeitsmethode ist einfach: Ihre personenbezogenen Daten/Ihr Video wird in unserer Community angezeigt. Benutzer entscheiden frei, ob sie auf dem Inhalt Ihrer persönlichen Daten auf/wie Sie berücksichtigen sollten.Als Austausch, der mag/folgt, erhalten sie Goldmünzen und können verwendet werden, um Follower/Liebhaber zu erhalten."
+            },
+            {
+                "title": "4. Ist Aufmerksamkeit und wie real?",
+                "value": "Natürlich ist es real. Wenn Sie verwandte Dienste kaufen, stehen viele echte Benutzer dahinter, die Ihnen Dienste zur Verfügung stellen, und sie werden in der offiziellen App betrieben. Sie müssen sich keine Sorgen machen."
+            },
+            {
+                "title": "5. Wie verdiene ich Goldmünzen?",
+                "value": "Auf der Homepage können Sie die Aufgabenliste sehen, klicken, um zu folgen oder zu mögen und zur entsprechenden App zu springen, um den Betrieb zu erhalten. Achten Sie darauf, Ihre Aufmerksamkeit nicht zu kündigen oder zu mögen, was dazu führt, dass Ihre Belohnung storniert wird."
+            },
+            {
+                "title": "6. Warum scheitern Aufgaben?",
+                "value": "Dies liegt normalerweise daran, dass Sie nicht wirklich darauf achten oder es mögen. Sie sollten zuerst Ihr Konto überprüfen."
+            },
+            {
+                "title": "7. Wie lange dauert es, bis meine Bestellung abgeschlossen ist?",
+                "value": [
+                    "Dies hängt von Ihrem Bestellvolumen ab. Normalerweise erhalten Sie den Service unmittelbar nach dem Aufgeben und Vervollständigung innerhalb von 24 Stunden, aber wir können keine genaue Zeit angeben, da eine große Anzahl echter Benutzer hinter dem Rücken operieren. Beachten Sie, dass der Goldene Service schneller ist als normale Dienstleistungen.",
+                    "Wenn Sie in kurzer Zeit zu viel Verkehr erhalten, wird Ihr Konto misstrauisch, sodass das geduldiges Warten der beste Weg ist."
+                ]
+            },
+            {
+                "title": "8. Was soll ich nach der Bestellung tun?",
+                "value": "Wenn Sie Ihre Bestellung aufgeben, halten Sie Ihr Konto offenbart. Ändern Sie Ihren Benutzernamen nicht, bevor die Bestellung abgeschlossen ist."
+            },
+            {
+                "title": "9. Was ist, wenn ich ein Problem habe?",
+                "value": "Sie können uns durch Feedback in der App kontaktieren."
+            }
+        ]
+    },
+    "about": {
+        "title": "um",
+        "contact": "kontaktiere uns",
+        "service": "Nutzungsbedingungen",
+        "policy": "Datenschutz-Bestimmungen"
+    },
+    "alert": {
+        "ok": "OK",
+        "cancel": "Absagen",
+        "confirm": "bestätigen"
+    },
+    "toast": {
+        "unpurchase": "Ich kann derzeit nicht kaufen",
+        "purchasedNotFound": "Kann den aktuellen Service nicht kaufen",
+        "payment": "Bezahlung erfolgreich!",
+        "coinsNotEnough": "Gold unzureichend!",
+        "received": "Erfolgreiche Quittung!",
+        "adError": "Wenn Sie sich zu oft Anzeigen ansehen, versuchen Sie es bitte später erneut!"
+    },
+    "localNotification": {
+        "adTaskReady": "Die neue Werbeaufgabe ist fertig!"
+    }
+}

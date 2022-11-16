@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "Nous contacter"
+    },
+    "universal": {
+        "coins": "or",
+        "requestError": "Veuillez réessayer plus tard",
+        "add": "Ajouter un compte"
+    },
+    "tabbar": {
+        "task": "page de garde",
+        "store": "magasin",
+        "setting": "d'installation"
+    },
+    "task": {
+        "title": "page de garde",
+        "skip": "franchir",
+        "follow": "concentrer sur",
+        "like": "Comme",
+        "noTask": "Ne pas demander",
+        "tip": {
+            "title": "Rapide",
+            "values": [
+                "1. Cliquez sur $value bouton",
+                "2. Ouvrir $value",
+                "$value. $value",
+                "4. Retour à $value",
+                "5. Obtenez des pièces d'or"
+            ],
+            "message": "Si vous annulez votre attention / comme, les pièces d'or seront supprimées!"
+        }
+    },
+    "store": {
+        "title": "magasin",
+        "free": "libre",
+        "follow": "Suiveurs",
+        "like": "Comme",
+        "view": "Regardez",
+        "share": "partager",
+        "retweet": "Retweeter",
+        "ad": {
+            "title": "Récompense publicitaire",
+            "watch": "Regarder une publicité"
+        },
+        "changeAccount": {
+            "title": "Modifier le compte",
+            "add": "Ajouter un compte"
+        },
+        "tip": {
+            "follow": {
+                "title": "Abonnés et adepte des seniors",
+                "values": [
+                    "",
+                    "Suiveurs",
+                    "Disciple principal",
+                    "Temps complet",
+                    "1-24 heures",
+                    "1 à 4 heures",
+                    "Temps de rémunération",
+                    "/",
+                    "Compensation dans les 7 jours",
+                    "Qualité des suiveurs",
+                    "réel",
+                    "Réel et actif",
+                    "Le taux d'abandon",
+                    "8-15%",
+                    "0-3%"
+                ]
+            },
+            "like": {
+                "title": "Comme des éloges avancés",
+                "values": [
+                    "",
+                    "Comme",
+                    "Éloge de haut niveau",
+                    "Temps complet",
+                    "1-24 heures",
+                    "1 à 4 heures",
+                    "Temps de rémunération",
+                    "/",
+                    "Compensation dans les 7 jours",
+                    "Le taux d'abandon",
+                    "8-15%",
+                    "0-3%"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Acheteur",
+            "like": "Achetez des éloges",
+            "view": "Acheter et regarder",
+            "share": "Acheter et partager",
+            "retweet": "Acheter un transfert",
+            "accountPublic": "* Veuillez garder votre compte est ouvert",
+            "channelPublic": "* Veuillez garder votre chaîne ouverte",
+            "tiktok": "Votre lien vidéo tiktok",
+            "twitter": "Votre lien Twitter Tweet",
+            "instagram": "Votre lien de publication Instagram",
+            "youtube": "Votre lien de chaîne YouTube",
+            "pay": "Payer"
+        },
+        "purchase": {
+            "title": "paiement réussi",
+            "message": "Veuillez attendre que la commande se termine!"
+        },
+        "notice": {
+            "message": "Pour obtenir $value abonnés gratuits, ouvrez d'abord la notification de l'application.",
+            "turnOn": "Ouvert"
+        }
+    },
+    "coins": {
+        "empty": "Pas d'histoire"
+    },
+    "login": {
+        "confirm": "confirmer",
+        "username": "Saisissez vos $value identifiants",
+        "channel": "Entrez votre lien de chaîne YouTube",
+        "publicUsername": "* Veuillez garder votre compte est ouvert",
+        "publicChannel": "* Veuillez garder votre chaîne ouverte",
+        "add": "Ajouter un compte",
+        "hintUsername": "Nom d'utilisateur",
+        "hintChannel": "Lien de canal"
+    },
+    "setting": {
+        "title": "d'installation",
+        "editor": "Modifier les informations",
+        "daily": "S'identifier",
+        "wheel": "Roue de la Fortune",
+        "account": "Compte de gestion",
+        "language": "Langue",
+        "orders": "Ordre",
+        "faq": "Problème commun",
+        "about": "sur",
+        "share": {
+            "title": "Partager l'application",
+            "message": "J'ai trouvé une application au trésor qui peut obtenir des fans et des likts Tiktok gratuits. Grâce à l'installation de liens suivante, nous aurons $value pièces d'or!"
+        },
+        "rateUs": "Nous évaluer"
+    },
+    "language": {
+        "title": "Choisissez une langue",
+        "start": "début"
+    },
+    "daily": {
+        "title": "S'identifier",
+        "checkIn": "S'identifier",
+        "rules": {
+            "title": "régner",
+            "values": [
+                "Vous pouvez vous connecter toutes les 24 heures;",
+                "Après l'interruption du signe, elle recommencera."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Roue de la Fortune",
+        "rules": {
+            "title": "régner",
+            "values": [
+                "Chaque loterie coûtera $value pièces d'or;",
+                "Le nombre de tirages n'est pas limité."
+            ]
+        }
+    },
+    "account": {
+        "title": "Compte de gestion",
+        "add": "+ Ajouter le numéro de compte",
+        "empty": "Pas de compte",
+        "alert": {
+            "title": "Supprimer le compte",
+            "message": "Après la suppression, vous ne pourrez pas utiliser le compte pour les opérations connexes."
+        }
+    },
+    "orders": {
+        "title": "Ordre",
+        "pending": "File d'attente",
+        "processing": "Traitement",
+        "inProgress": "En traitement",
+        "completed": "complété",
+        "partial": "Achèvement partiel",
+        "error": "erreur",
+        "canceled": "Annulé",
+        "refunded": "remboursé",
+        "empty": "Pas de commande"
+    },
+    "faq": {
+        "title": "Problème commun",
+        "values": [
+            {
+                "title": "1. Comment commencer?",
+                "value": "Ajoutez simplement le nom d'utilisateur de votre plate-forme en fonction des invites de page, pas de mot de passe, chaque plate-forme a une invite correspondante."
+            },
+            {
+                "title": "2. Est-il sûr de l'utiliser?",
+                "value": "Bien sûr, il est sûr. Nous n'avons pas besoin de votre mot de passe, et nous ne pouvons pas enregistrer vos données d'application sociale, car elle passe à l'application officielle pour faire attention ou faire d'autres choses."
+            },
+            {
+                "title": "3. Comment cela fonctionne-t-il tout?",
+                "value": "La méthode de travail est simple: vos données / vidéos personnelles sont affichées dans notre communauté. Les utilisateurs décident librement s'ils devraient prêter attention / comme vous en fonction du contenu de vos données personnelles.En tant qu'échange qui aime / suivre, ils recevront des pièces d'or et peuvent être utilisées pour obtenir des abonnés / amoureux."
+            },
+            {
+                "title": "4. L'attention est-elle et comme réelle?",
+                "value": "Bien sûr, c'est réel. Lorsque vous achetez des services connexes, il y a beaucoup de vrais utilisateurs derrière pour vous fournir des services, et il est exploité sur l'application officielle. Vous n'avez pas à vous en soucier."
+            },
+            {
+                "title": "5. Comment gagner des pièces d'or?",
+                "value": "Sur la page d'accueil, vous pouvez voir la liste des tâches, cliquer pour suivre ou comme, et sauter à l'application correspondante pour l'opération. Veuillez faire attention à ne pas annuler votre attention ou comme, ce qui entraînera l'annulation de votre récompense."
+            },
+            {
+                "title": "6. Pourquoi les tâches échouent-elles?",
+                "value": "C'est généralement parce que vous ne faites pas vraiment attention ou que vous l'aimez. Vous devez d'abord vérifier votre compte."
+            },
+            {
+                "title": "7. Combien de temps faut-il pour terminer ma commande?",
+                "value": [
+                    "Cela dépend de votre volume de commande. Habituellement, vous commencerez à obtenir le service immédiatement après avoir passé la commande et à le terminer dans les 24 heures, mais nous ne pouvons pas donner de temps précis, car il y a un grand nombre d'utilisateurs réel Soyez noté que le service d'or est plus rapide que les services ordinaires.",
+                    "Obtenez trop de trafic en peu de temps rendra votre compte suspect, donc attendre patiemment est le meilleur moyen."
+                ]
+            },
+            {
+                "title": "8. Que dois-je faire après avoir commandé?",
+                "value": "Après avoir passé votre commande, gardez votre compte divulgué. Ne modifiez pas votre nom d'utilisateur avant la fin de la commande."
+            },
+            {
+                "title": "9. Et si j'ai un problème?",
+                "value": "Vous pouvez nous contacter via des commentaires dans l'application."
+            }
+        ]
+    },
+    "about": {
+        "title": "sur",
+        "contact": "Nous contacter",
+        "service": "Conditions d'utilisation",
+        "policy": "Politique de confidentialité"
+    },
+    "alert": {
+        "ok": "D'ACCORD",
+        "cancel": "Annuler",
+        "confirm": "confirmer"
+    },
+    "toast": {
+        "unpurchase": "Impossible d'acheter actuellement",
+        "purchasedNotFound": "Impossible d'acheter le service actuel",
+        "payment": "Paiement réussi!",
+        "coinsNotEnough": "Or inadéquat!",
+        "received": "Reçu réussi!",
+        "adError": "Regarder les annonces trop souvent, réessayez plus tard!"
+    },
+    "localNotification": {
+        "adTaskReady": "La nouvelle tâche publicitaire est prête!"
+    }
+}

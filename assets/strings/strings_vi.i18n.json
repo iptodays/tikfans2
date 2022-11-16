@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "liên hệ chúng tôi"
+    },
+    "universal": {
+        "coins": "vàng",
+        "requestError": "Vui lòng thử lại sau",
+        "add": "Thêm tài khoản"
+    },
+    "tabbar": {
+        "task": "trang nhất",
+        "store": "cửa tiệm",
+        "setting": "cài đặt"
+    },
+    "task": {
+        "title": "trang nhất",
+        "skip": "nhảy qua",
+        "follow": "tập trung vào",
+        "like": "giống",
+        "noTask": "Đừng hỏi",
+        "tip": {
+            "title": "Lời nhắc",
+            "values": [
+                "1. Nhấp $value nút",
+                "2. Mở $value",
+                "$value. $value",
+                "4. Quay lại $value",
+                "5. Nhận tiền vàng"
+            ],
+            "message": "Nếu bạn hủy bỏ sự chú ý/thích, tiền vàng sẽ bị xóa!"
+        }
+    },
+    "store": {
+        "title": "cửa tiệm",
+        "free": "tự do",
+        "follow": "Người theo dõi",
+        "like": "giống",
+        "view": "Đồng hồ",
+        "share": "đăng lại",
+        "retweet": "Retweet",
+        "ad": {
+            "title": "Phần thưởng quảng cáo",
+            "watch": "Xem một quảng cáo"
+        },
+        "changeAccount": {
+            "title": "Sửa đổi tài khoản",
+            "add": "Thêm tài khoản"
+        },
+        "tip": {
+            "follow": {
+                "title": "Người theo dõi & người theo dõi cao cấp",
+                "values": [
+                    "",
+                    "Người theo dõi",
+                    "Người theo dõi cao cấp",
+                    "Hoàn thành thời gian",
+                    "1-24 giờ",
+                    "1-4 giờ",
+                    "Thời gian bồi thường",
+                    "/",
+                    "Bồi thường trong vòng 7 ngày",
+                    "Chất lượng người theo dõi",
+                    "có thật",
+                    "Thực & hoạt động",
+                    "Tỷ lệ giảm",
+                    "8-15%",
+                    "0-3%"
+                ]
+            },
+            "like": {
+                "title": "Thích & khen ngợi nâng cao",
+                "values": [
+                    "",
+                    "giống",
+                    "CAO CẤP CÔNG CỤ",
+                    "Hoàn thành thời gian",
+                    "1-24 giờ",
+                    "1-4 giờ",
+                    "Thời gian bồi thường",
+                    "/",
+                    "Bồi thường trong vòng 7 ngày",
+                    "Tỷ lệ giảm",
+                    "8-15%",
+                    "0-3%"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Người mua",
+            "like": "Mua một số khen ngợi",
+            "view": "Mua và xem",
+            "share": "Mua và chia sẻ",
+            "retweet": "Mua một chuyển nhượng",
+            "accountPublic": "* Vui lòng giữ tài khoản của bạn đang mở",
+            "channelPublic": "* Vui lòng giữ kênh của bạn mở",
+            "tiktok": "Liên kết video Tiktok của bạn",
+            "twitter": "Liên kết Twitter của bạn",
+            "instagram": "Liên kết bài đăng trên Instagram của bạn",
+            "youtube": "Liên kết kênh YouTube của bạn",
+            "pay": "Trả tiền"
+        },
+        "purchase": {
+            "title": "Thanh toán thành công",
+            "message": "Vui lòng đợi đơn đặt hàng hoàn thành!"
+        },
+        "notice": {
+            "message": "Để có được $value người theo dõi miễn phí, hãy mở thông báo ứng dụng trước.",
+            "turnOn": "Mở"
+        }
+    },
+    "coins": {
+        "empty": "Không có lịch sử"
+    },
+    "login": {
+        "confirm": "xác nhận",
+        "username": "Nhập $value tên người dùng của bạn",
+        "channel": "Nhập liên kết kênh YouTube của bạn",
+        "publicUsername": "* Vui lòng giữ tài khoản của bạn đang mở",
+        "publicChannel": "* Vui lòng giữ kênh của bạn mở",
+        "add": "Thêm tài khoản",
+        "hintUsername": "tên tài khoản",
+        "hintChannel": "Liên kết kênh"
+    },
+    "setting": {
+        "title": "cài đặt",
+        "editor": "chỉnh sửa thông tin",
+        "daily": "Đăng nhập",
+        "wheel": "Vòng quay may mắn",
+        "account": "Tài khoản quản lý",
+        "language": "ngôn ngữ",
+        "orders": "Gọi món",
+        "faq": "vấn đề thường gặp",
+        "about": "Về",
+        "share": {
+            "title": "Chia sẻ ứng dụng",
+            "message": "Tôi đã tìm thấy một ứng dụng kho báu có thể nhận được người hâm mộ và lượt thích Tiktok miễn phí. Thông qua việc cài đặt liên kết sau, chúng tôi sẽ nhận được $value đồng vàng!"
+        },
+        "rateUs": "Đánh giá chúng tôi"
+    },
+    "language": {
+        "title": "Chọn một ngôn ngữ",
+        "start": "bắt đầu"
+    },
+    "daily": {
+        "title": "Đăng nhập",
+        "checkIn": "Đăng nhập",
+        "rules": {
+            "title": "qui định",
+            "values": [
+                "Bạn có thể đăng nhập cứ sau 24 giờ;",
+                "Sau khi ký hiệu -gián đoạn, nó sẽ bắt đầu lại."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Vòng quay may mắn",
+        "rules": {
+            "title": "qui định",
+            "values": [
+                "Mỗi xổ số sẽ có giá $value đồng vàng;",
+                "Số lượng trận hòa không bị giới hạn."
+            ]
+        }
+    },
+    "account": {
+        "title": "Tài khoản quản lý",
+        "add": "+ Thêm số tài khoản",
+        "empty": "Không tài khoản",
+        "alert": {
+            "title": "Xóa tài khoản",
+            "message": "Sau khi xóa, bạn sẽ không thể sử dụng tài khoản cho các hoạt động liên quan."
+        }
+    },
+    "orders": {
+        "title": "Gọi món",
+        "pending": "Xếp hàng",
+        "processing": "Xử lý",
+        "inProgress": "Chế biến",
+        "completed": "hoàn thành",
+        "partial": "Hoàn thành một phần",
+        "error": "sai lầm, điều sai, ngộ nhận",
+        "canceled": "Bị hủy bỏ",
+        "refunded": "hoàn lại tiền",
+        "empty": "Không có đơn đặt hàng"
+    },
+    "faq": {
+        "title": "vấn đề thường gặp",
+        "values": [
+            {
+                "title": "1. Làm thế nào để bắt đầu?",
+                "value": "Chỉ cần thêm tên người dùng nền tảng của bạn theo lời nhắc trang, không có mật khẩu, mỗi nền tảng có một lời nhắc tương ứng."
+            },
+            {
+                "title": "2. Có an toàn khi sử dụng nó không?",
+                "value": "Tất nhiên, nó an toàn. Chúng tôi không cần mật khẩu của bạn và chúng tôi không thể lưu dữ liệu ứng dụng xã hội của bạn vì nó đang chuyển sang ứng dụng chính thức để chú ý hoặc làm những việc khác."
+            },
+            {
+                "title": "3. Làm thế nào để làm việc tất cả?",
+                "value": "Phương pháp làm việc rất đơn giản: Dữ liệu/video cá nhân của bạn được hiển thị trong cộng đồng của chúng tôi. Người dùng tự do quyết định xem họ có nên chú ý/thích bạn dựa trên nội dung dữ liệu cá nhân của bạn hay không.Là một trao đổi thích/theo dõi, họ sẽ nhận được tiền vàng và có thể được sử dụng để có được người theo dõi/người yêu."
+            },
+            {
+                "title": "4. Sự chú ý và giống như thật?",
+                "value": "Tất nhiên, đó là sự thật. Khi bạn mua các dịch vụ liên quan, có rất nhiều người dùng thực sự đằng sau nó để cung cấp cho bạn các dịch vụ và nó được vận hành trên ứng dụng chính thức. Bạn không cần phải lo lắng về nó."
+            },
+            {
+                "title": "5. Làm cách nào để kiếm tiền vàng?",
+                "value": "Trên trang chủ, bạn có thể thấy danh sách nhiệm vụ, bấm vào để làm theo hoặc thích và nhảy vào ứng dụng tương ứng để vận hành. Hãy cẩn thận không hủy sự chú ý của bạn hoặc thích, điều này sẽ khiến phần thưởng của bạn bị hủy."
+            },
+            {
+                "title": "6. Tại sao các nhiệm vụ thất bại?",
+                "value": "Điều này thường là do bạn không thực sự chú ý hoặc thích nó. Bạn nên kiểm tra tài khoản của mình trước."
+            },
+            {
+                "title": "7. Mất bao lâu để hoàn thành đơn đặt hàng của tôi?",
+                "value": [
+                    "Điều này phụ thuộc vào khối lượng đơn đặt hàng của bạn. Thông thường, bạn sẽ bắt đầu nhận dịch vụ ngay sau khi đặt hàng và hoàn thành nó trong vòng 24 giờ, nhưng chúng tôi không thể cho thời gian chính xác, vì có một số lượng lớn người dùng thực hoạt động sau lưng. Được lưu ý dịch vụ vàng nhanh hơn các dịch vụ thông thường.",
+                    "Nhận quá nhiều lưu lượng truy cập trong một thời gian ngắn sẽ khiến tài khoản của bạn đáng ngờ, vì vậy chờ đợi một cách kiên nhẫn là cách tốt nhất."
+                ]
+            },
+            {
+                "title": "8. Tôi nên làm gì sau khi đặt hàng?",
+                "value": "Sau khi bạn đặt hàng, hãy giữ tài khoản của bạn được tiết lộ. Không sửa đổi tên người dùng của bạn trước khi đơn đặt hàng hoàn tất."
+            },
+            {
+                "title": "9. Nếu tôi gặp vấn đề thì sao?",
+                "value": "Bạn có thể liên hệ với chúng tôi thông qua phản hồi trong ứng dụng."
+            }
+        ]
+    },
+    "about": {
+        "title": "Về",
+        "contact": "liên hệ chúng tôi",
+        "service": "Điều khoản dịch vụ",
+        "policy": "Chính sách bảo mật"
+    },
+    "alert": {
+        "ok": "ĐƯỢC RỒI",
+        "cancel": "Hủy bỏ",
+        "confirm": "xác nhận"
+    },
+    "toast": {
+        "unpurchase": "Không thể mua hiện tại",
+        "purchasedNotFound": "Không thể mua dịch vụ hiện tại",
+        "payment": "Thanh toán thành công!",
+        "coinsNotEnough": "Vàng không đủ!",
+        "received": "Biên lai thành công!",
+        "adError": "Xem quảng cáo quá thường xuyên, xin vui lòng thử lại sau!"
+    },
+    "localNotification": {
+        "adTaskReady": "Nhiệm vụ quảng cáo mới đã sẵn sàng!"
+    }
+}

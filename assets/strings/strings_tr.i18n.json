@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "Bize Ulaşın"
+    },
+    "universal": {
+        "coins": "altın",
+        "requestError": "Lütfen daha sonra tekrar deneyiniz",
+        "add": "Hesap eklemek"
+    },
+    "tabbar": {
+        "task": "ön Sayfa",
+        "store": "Dükkan",
+        "setting": "kurmak"
+    },
+    "task": {
+        "title": "ön Sayfa",
+        "skip": "üzerinden atlamak",
+        "follow": "odaklan",
+        "like": "beğenmek",
+        "noTask": "Sorma",
+        "tip": {
+            "title": "Çabuk",
+            "values": [
+                "1. $value düğmeyi tıklayın",
+                "2. Açık $value",
+                "$value. $value",
+                "4. $value'e geri dön",
+                "5. Altın Para Alın"
+            ],
+            "message": "Dikkatinizi/beğeninizi iptal ederseniz, altın madeni paralar kaldırılacaktır!"
+        }
+    },
+    "store": {
+        "title": "Dükkan",
+        "free": "Bedava",
+        "follow": "Takipçiler",
+        "like": "beğenmek",
+        "view": "İzlemek",
+        "share": "Paylaş",
+        "retweet": "Retweet",
+        "ad": {
+            "title": "Reklam ödülü",
+            "watch": "Bir Reklam İzleyin"
+        },
+        "changeAccount": {
+            "title": "Hesabı değiştir",
+            "add": "Hesap eklemek"
+        },
+        "tip": {
+            "follow": {
+                "title": "Takipçiler ve kıdemli takipçi",
+                "values": [
+                    "",
+                    "Takipçiler",
+                    "Kıdemli takipçi",
+                    "Tam zaman",
+                    "1-24 saat",
+                    "1-4 saat",
+                    "Tazminat süresi",
+                    "/",
+                    "7 gün içinde tazminat",
+                    "Takipçi kalitesi",
+                    "gerçek",
+                    "Gerçek ve Aktif",
+                    "Düşme oranı",
+                    "% 8-15",
+                    "% 0-3"
+                ]
+            },
+            "like": {
+                "title": "Gibi ve Gelişmiş Övgü",
+                "values": [
+                    "",
+                    "beğenmek",
+                    "Yüksek seviyeli övgü",
+                    "Tam zaman",
+                    "1-24 saat",
+                    "1-4 saat",
+                    "Tazminat süresi",
+                    "/",
+                    "7 gün içinde tazminat",
+                    "Düşme oranı",
+                    "% 8-15",
+                    "% 0-3"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Alıcı",
+            "like": "Biraz övgü al",
+            "view": "Satın Al ve İzle",
+            "share": "Satın Al ve Paylaş",
+            "retweet": "Transfer Satın Alın",
+            "accountPublic": "* Lütfen hesabınızın açık tutun",
+            "channelPublic": "* Lütfen kanalınızı açık tutun",
+            "tiktok": "Tiktok video bağlantınız",
+            "twitter": "Twitter tweet bağlantınız",
+            "instagram": "Instagram Post bağlantınız",
+            "youtube": "YouTube kanal bağlantınız",
+            "pay": "Ödemek"
+        },
+        "purchase": {
+            "title": "Ödeme başarılı",
+            "message": "Lütfen siparişin tamamlanmasını bekleyin!"
+        },
+        "notice": {
+            "message": "$value ücretsiz takipçi almak için önce uygulama bildirimini açın.",
+            "turnOn": "Açık"
+        }
+    },
+    "coins": {
+        "empty": "Tarih Yok"
+    },
+    "login": {
+        "confirm": "onaylamak",
+        "username": "$value kullanıcı adınızı girin",
+        "channel": "YouTube kanal bağlantınızı girin",
+        "publicUsername": "* Lütfen hesabınızın açık tutun",
+        "publicChannel": "* Lütfen kanalınızı açık tutun",
+        "add": "Hesap eklemek",
+        "hintUsername": "Kullanıcı adı",
+        "hintChannel": "Kanal bağlantısı"
+    },
+    "setting": {
+        "title": "kurmak",
+        "editor": "Bilgileri Düzenle",
+        "daily": "Kayıt olmak",
+        "wheel": "Çarkıfelek",
+        "account": "Hesap Yönetimi",
+        "language": "dil",
+        "orders": "Emir",
+        "faq": "ortak sorun",
+        "about": "hakkında",
+        "share": {
+            "title": "Uygulamayı Paylaş",
+            "message": "Ücretsiz Tiktok hayranları ve beğeni alabilen bir hazine uygulaması buldum. Aşağıdaki bağlantı kurulumu aracılığıyla $value altın parayı alacağız!"
+        },
+        "rateUs": "Bizi değerlendirin"
+    },
+    "language": {
+        "title": "Bir Dil Seçin",
+        "start": "Başlat"
+    },
+    "daily": {
+        "title": "Kayıt olmak",
+        "checkIn": "Kayıt olmak",
+        "rules": {
+            "title": "kural",
+            "values": [
+                "Her 24 saatte bir oturum açabilirsiniz;",
+                "İşaretten sonra -kesintiye göre tekrar başlayacak."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Çarkıfelek",
+        "rules": {
+            "title": "kural",
+            "values": [
+                "Her piyango $value altın paraya mal olacak;",
+                "Çekiliş sayısı sınırlı değildir."
+            ]
+        }
+    },
+    "account": {
+        "title": "Hesap Yönetimi",
+        "add": "+ Hesap Numarası Ekle",
+        "empty": "Hesap yok",
+        "alert": {
+            "title": "Hesabı sil",
+            "message": "Silmeden sonra, ilgili işlemler için hesabı kullanamazsınız."
+        }
+    },
+    "orders": {
+        "title": "Emir",
+        "pending": "Sıra",
+        "processing": "İşleme",
+        "inProgress": "işleme",
+        "completed": "Tamamlandı",
+        "partial": "Kısmi tamamlama",
+        "error": "hata",
+        "canceled": "İptal edildi",
+        "refunded": "geri ödemeli",
+        "empty": "Sipariş yok"
+    },
+    "faq": {
+        "title": "ortak sorun",
+        "values": [
+            {
+                "title": "1. Nasıl Başlatılır?",
+                "value": "Platform kullanıcı adınızı sayfa istemlerine göre ekleyin, şifre yok, her platformun karşılık gelen bir istemi vardır."
+            },
+            {
+                "title": "2. Kullanmak güvenli mi?",
+                "value": "Tabii ki, bu güvenlidir. Parolanıza ihtiyacımız yoktur ve sosyal uygulama verilerinizi kaydedemeyiz, çünkü başka şeylere dikkat etmek veya başka şeyleri yapmak için resmi uygulamaya atlar."
+            },
+            {
+                "title": "3. Bunlar nasıl çalışır?",
+                "value": "Çalışma yöntemi basittir: kişisel verileriniz/videonuz topluluğumuzda görüntülenir. Kullanıcılar, kişisel verilerinizin içeriğine göre size dikkat edip etmemeleri/beğenmeleri gerekip gerekmediğine özgürce karar verirler.Seven/takip eden bir değişim olarak altın paralar alacaklar ve takipçileri/sevenleri almak için kullanılabilirler."
+            },
+            {
+                "title": "4. Dikkat ve Gibi Gerçek mi?",
+                "value": "Tabii ki, bu gerçek. İlgili hizmetler satın aldığınızda, size hizmet vermek için arkasında çok sayıda gerçek kullanıcı var ve resmi uygulamada işletiliyor. Bu konuda endişelenmenize gerek yok."
+            },
+            {
+                "title": "5. Altın Paraları Nasıl Kazanırım?",
+                "value": "Ana sayfada, görev listesini görebilir, takip etmek veya beğenmek için tıklayabilir ve operasyon için ilgili uygulamaya atlayabilirsiniz. Lütfen dikkatinizi iptal etmemeye dikkat edin, bu da ödülünüzün iptal edilmesine neden olacak."
+            },
+            {
+                "title": "6. Görevler neden başarısız oluyor?",
+                "value": "Bunun nedeni genellikle gerçekten dikkat etmemeniz veya beğenmemenizdir. Önce hesabınızı kontrol etmelisiniz."
+            },
+            {
+                "title": "7. Siparişimi tamamlamak ne kadar sürer?",
+                "value": [
+                    "Bu, sipariş hacminize bağlıdır. Genellikle, siparişi verdikten hemen sonra hizmeti almaya başlayacaksınız ve 24 saat içinde tamamlayacaksınız, ancak doğru zaman veremeyiz, çünkü arkada çalışan çok sayıda gerçek kullanıcı var. Altın hizmetin sıradan hizmetlerden daha hızlı olduğu belirtiliyor.",
+                    "Kısa sürede çok fazla trafik alın hesabınızı şüpheli hale getirecektir, bu nedenle sabırla beklemek en iyi yoldur."
+                ]
+            },
+            {
+                "title": "8. Sipariş verdikten sonra ne yapmalıyım?",
+                "value": "Siparişinizi verdikten sonra hesabınızı açıklayın. Sipariş tamamlanmadan önce kullanıcı adınızı değiştirmeyin."
+            },
+            {
+                "title": "9. Ya bir sorunum varsa?",
+                "value": "Uygulamadaki geri bildirimlerle bizimle iletişime geçebilirsiniz."
+            }
+        ]
+    },
+    "about": {
+        "title": "hakkında",
+        "contact": "Bize Ulaşın",
+        "service": "Kullanım Şartları",
+        "policy": "Gizlilik Politikası"
+    },
+    "alert": {
+        "ok": "TAMAM",
+        "cancel": "İptal",
+        "confirm": "onaylamak"
+    },
+    "toast": {
+        "unpurchase": "Şu anda satın alamıyorum",
+        "purchasedNotFound": "Mevcut hizmeti satın alamıyorum",
+        "payment": "Ödeme başarılı!",
+        "coinsNotEnough": "Altın yetersiz!",
+        "received": "Başarılı makbuz!",
+        "adError": "Reklamları çok sık izlerken, lütfen daha sonra tekrar deneyin!"
+    },
+    "localNotification": {
+        "adTaskReady": "Yeni reklam görevi hazır!"
+    }
+}

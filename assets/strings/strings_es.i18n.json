@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "Contáctenos"
+    },
+    "universal": {
+        "coins": "oro",
+        "requestError": "Por favor, inténtelo de nuevo más tarde",
+        "add": "Añadir cuenta"
+    },
+    "tabbar": {
+        "task": "página delantera",
+        "store": "tienda",
+        "setting": "configurar"
+    },
+    "task": {
+        "title": "página delantera",
+        "skip": "salte por encima",
+        "follow": "concentrarse en",
+        "like": "me gusta",
+        "noTask": "No preguntar",
+        "tip": {
+            "title": "Inmediato",
+            "values": [
+                "1. Haga clic en el botón $value",
+                "2. Abrir $value",
+                "$value. $value",
+                "4. Volver a $value",
+                "5. Obtenga monedas de oro"
+            ],
+            "message": "Si cancela su atención/me gusta, ¡las monedas de oro se eliminarán!"
+        }
+    },
+    "store": {
+        "title": "tienda",
+        "free": "libre",
+        "follow": "Seguidores",
+        "like": "me gusta",
+        "view": "Reloj",
+        "share": "Cuota",
+        "retweet": "Retuitear",
+        "ad": {
+            "title": "Recompensa publicitaria",
+            "watch": "Mira un anuncio"
+        },
+        "changeAccount": {
+            "title": "Modificar la cuenta",
+            "add": "Añadir cuenta"
+        },
+        "tip": {
+            "follow": {
+                "title": "Seguidores y seguidor senior",
+                "values": [
+                    "",
+                    "Seguidores",
+                    "Seguidor senior",
+                    "Tiempo completo",
+                    "1-24 horas",
+                    "1-4 horas",
+                    "Tiempo de compensación",
+                    "/",
+                    "Compensación dentro de los 7 días",
+                    "Calidad seguidor",
+                    "real",
+                    "Real y activo",
+                    "Tasa de abandono",
+                    "8-15%",
+                    "0-3%"
+                ]
+            },
+            "like": {
+                "title": "Alabanza como y avanzada",
+                "values": [
+                    "",
+                    "me gusta",
+                    "Alabanza de alto nivel",
+                    "Tiempo completo",
+                    "1-24 horas",
+                    "1-4 horas",
+                    "Tiempo de compensación",
+                    "/",
+                    "Compensación dentro de los 7 días",
+                    "Tasa de abandono",
+                    "8-15%",
+                    "0-3%"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Comprador",
+            "like": "Comprar algunos elogios",
+            "view": "Comprar y mirar",
+            "share": "Comprar y compartir",
+            "retweet": "Comprar una transferencia",
+            "accountPublic": "* Por favor, mantenga su cuenta abierta",
+            "channelPublic": "* Mantenga su canal abierto",
+            "tiktok": "Tu enlace de video Tiktok",
+            "twitter": "Tu enlace de tweet de Twitter",
+            "instagram": "Tu enlace de publicación de Instagram",
+            "youtube": "Tu enlace de canal de YouTube",
+            "pay": "Pagar"
+        },
+        "purchase": {
+            "title": "Pago exitoso",
+            "message": "¡Espere a que se complete el pedido!"
+        },
+        "notice": {
+            "message": "Para obtener $value seguidores gratuitos, abra la notificación de la aplicación primero.",
+            "turnOn": "Abierto"
+        }
+    },
+    "coins": {
+        "empty": "No historia"
+    },
+    "login": {
+        "confirm": "confirmar",
+        "username": "Ingrese su nombre de usuario $value",
+        "channel": "Ingrese el enlace de su canal de YouTube",
+        "publicUsername": "* Por favor, mantenga su cuenta abierta",
+        "publicChannel": "* Mantenga su canal abierto",
+        "add": "Añadir cuenta",
+        "hintUsername": "nombre de usuario",
+        "hintChannel": "Enlace de canal"
+    },
+    "setting": {
+        "title": "configurar",
+        "editor": "editar informacion",
+        "daily": "Iniciar sesión",
+        "wheel": "Rueda de la fortuna",
+        "account": "Cuenta de gestión",
+        "language": "idioma",
+        "orders": "Ordenar",
+        "faq": "problema comun",
+        "about": "sobre",
+        "share": {
+            "title": "Compartir aplicación",
+            "message": "Encontré una aplicación del tesoro que puede obtener fanáticos y me gusta de Tiktok gratis. A través de la siguiente instalación del enlace, ¡obtendremos $value monedas de oro!"
+        },
+        "rateUs": "Evaluarnos"
+    },
+    "language": {
+        "title": "Elija un idioma",
+        "start": "comienzo"
+    },
+    "daily": {
+        "title": "Iniciar sesión",
+        "checkIn": "Iniciar sesión",
+        "rules": {
+            "title": "regla",
+            "values": [
+                "Puede iniciar sesión cada 24 horas;",
+                "Después de la interrupción del signo, comenzará de nuevo."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Rueda de la fortuna",
+        "rules": {
+            "title": "regla",
+            "values": [
+                "Cada lotería costará $value monedas de oro;",
+                "El número de sorteos no es limitado."
+            ]
+        }
+    },
+    "account": {
+        "title": "Cuenta de gestión",
+        "add": "+ Agregar número de cuenta",
+        "empty": "Sin cuenta",
+        "alert": {
+            "title": "Borrar cuenta",
+            "message": "Después de eliminar, no podrá usar la cuenta para operaciones relacionadas."
+        }
+    },
+    "orders": {
+        "title": "Ordenar",
+        "pending": "Cola",
+        "processing": "Procesando",
+        "inProgress": "Procesando",
+        "completed": "terminado",
+        "partial": "Finalización parcial",
+        "error": "error",
+        "canceled": "Cancelado",
+        "refunded": "reintegrado",
+        "empty": "Sin orden"
+    },
+    "faq": {
+        "title": "problema comun",
+        "values": [
+            {
+                "title": "1. ¿Cómo comenzar?",
+                "value": "Simplemente agregue el nombre de usuario de su plataforma de acuerdo con las indicaciones de la página, sin contraseña, cada plataforma tiene un mensaje correspondiente."
+            },
+            {
+                "title": "2. ¿Es seguro usarlo?",
+                "value": "Por supuesto, es seguro. No necesitamos su contraseña y no podemos guardar los datos de su aplicación social porque está saltando a la aplicación oficial para prestar atención o hacer otras cosas."
+            },
+            {
+                "title": "3. ¿Cómo funciona todo esto?",
+                "value": "El método de trabajo es simple: sus datos/video personales se muestran en nuestra comunidad. Los usuarios deciden libremente si deben prestar atención a/como usted en función del contenido de sus datos personales.Como un intercambio que le gusta/seguirán, recibirán monedas de oro y se pueden usar para obtener seguidores/amantes."
+            },
+            {
+                "title": "4. ¿Es la atención y como real?",
+                "value": "Por supuesto, es real. Cuando compra servicios relacionados, hay muchos usuarios reales detrás de él para brindarle servicios, y se opera en la aplicación oficial. No necesita preocuparse por ello."
+            },
+            {
+                "title": "5. ¿Cómo gano las monedas de oro?",
+                "value": "En la página de inicio, puede ver la lista de tareas, hacer clic para seguir o Me gusta, y saltar a la aplicación correspondiente para su operación. Tenga cuidado de no cancelar su atención o, lo que hará que su recompensa se cancele."
+            },
+            {
+                "title": "6. ¿Por qué fallan las tareas?",
+                "value": "Esto generalmente se debe a que realmente no presta atención o le gusta. Primero debe consultar su cuenta."
+            },
+            {
+                "title": "7. ¿Cuánto tiempo lleva completar mi pedido?",
+                "value": [
+                    "Esto depende de su volumen de pedido. Por lo general, comenzará a obtener el servicio inmediatamente después de realizar el pedido y completarlo dentro de las 24h, pero no podemos dar un tiempo preciso, porque hay una gran cantidad de usuarios reales que operan detrás de la espalda. Debe hacerlo. Se notará que Golden Service es más rápido que los servicios ordinarios.",
+                    "Obtenga demasiado tráfico en poco tiempo hará que su cuenta sospeche, por lo que esperar pacientemente es la mejor manera."
+                ]
+            },
+            {
+                "title": "8. ¿Qué debo hacer después de ordenar?",
+                "value": "Después de realizar su pedido, mantenga su cuenta divulgada. No modifique su nombre de usuario antes de que se complete el pedido."
+            },
+            {
+                "title": "9. ¿Qué pasa si tengo un problema?",
+                "value": "Puede contactarnos a través de comentarios en la aplicación."
+            }
+        ]
+    },
+    "about": {
+        "title": "sobre",
+        "contact": "Contáctenos",
+        "service": "Términos de servicio",
+        "policy": "Política de privacidad"
+    },
+    "alert": {
+        "ok": "OK",
+        "cancel": "Cancelar",
+        "confirm": "confirmar"
+    },
+    "toast": {
+        "unpurchase": "No puedo comprar actualmente",
+        "purchasedNotFound": "No puedo comprar el servicio actual",
+        "payment": "¡Pago exitoso!",
+        "coinsNotEnough": "¡Oro inadecuado!",
+        "received": "Recibo exitoso!",
+        "adError": "Viendo anuncios con demasiada frecuencia, ¡inténtelo de nuevo más tarde!"
+    },
+    "localNotification": {
+        "adTaskReady": "¡La nueva tarea publicitaria está lista!"
+    }
+}

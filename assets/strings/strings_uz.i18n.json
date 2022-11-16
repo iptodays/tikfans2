@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "Biz bilan bog'lanish"
+    },
+    "universal": {
+        "coins": "oltin",
+        "requestError": "Iltimos keyinroq qayta urinib ko'ring",
+        "add": "Hisob qaydnomasini qo'shing"
+    },
+    "tabbar": {
+        "task": "Old sahifa",
+        "store": "do'kon",
+        "setting": "sozlash; o'rnatish"
+    },
+    "task": {
+        "title": "Old sahifa",
+        "skip": "sakrab o'tish",
+        "follow": "ga diqqatni jalb etish",
+        "like": "o'xshash",
+        "noTask": "Vazifa yo'q",
+        "tip": {
+            "title": "Tez",
+            "values": [
+                "1. $value tugmachani bosing",
+                "2. $value oching",
+                "$value. $value",
+                "4. orqaga $value",
+                "5. Oltin tanga oling"
+            ],
+            "message": "Agar sizning e'tiboringizni bekor qilsangiz, oltin tangalar olib tashlanadi!"
+        }
+    },
+    "store": {
+        "title": "do'kon",
+        "free": "ozod",
+        "follow": "Izdoshlar",
+        "like": "o'xshash",
+        "view": "Tomosha",
+        "share": "baham ko'rmoq",
+        "retweet": "Retwet",
+        "ad": {
+            "title": "Reklama mukofoti",
+            "watch": "Reklamani tomosha qiling"
+        },
+        "changeAccount": {
+            "title": "Hisobni o'zgartirish",
+            "add": "Hisob qaydnomasini qo'shing"
+        },
+        "tip": {
+            "follow": {
+                "title": "Izdoshlar va katta izdoshlar",
+                "values": [
+                    "",
+                    "Izdoshlar",
+                    "Katta izdosh",
+                    "To'liq vaqt",
+                    "1-24 soat",
+                    "1-4 soat",
+                    "Kompensatsiya vaqti",
+                    "/",
+                    "7 kun ichida kompensatsiya",
+                    "Izdosh sifati",
+                    "haqiqiy",
+                    "Real va faol",
+                    "Tomchilik darajasi",
+                    "8-15%",
+                    "0-3%"
+                ]
+            },
+            "like": {
+                "title": "Kabi va maqtov kabi",
+                "values": [
+                    "",
+                    "o'xshash",
+                    "Yuqori -level maqtov",
+                    "To'liq vaqt",
+                    "1-24 soat",
+                    "1-4 soat",
+                    "Kompensatsiya vaqti",
+                    "/",
+                    "7 kun ichida kompensatsiya",
+                    "Tomchilik darajasi",
+                    "8-15%",
+                    "0-3%"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Xaridor",
+            "like": "Bir nechta maqtov sotib oling",
+            "view": "Sotib oling va tomosha qiling",
+            "share": "Sotib oling va baham ko'ring",
+            "retweet": "O'tkazma sotib oling",
+            "accountPublic": "* Iltimos, hisobingizni oching",
+            "channelPublic": "* Iltimos, kanalingizni oching",
+            "tiktok": "Tiktok video havolasi",
+            "twitter": "Sizning Twitter tvitchiligi",
+            "instagram": "Sizning Instagram Post havolasi",
+            "youtube": "Sizning Youtube kanalingiz havolasi",
+            "pay": "To'lash"
+        },
+        "purchase": {
+            "title": "To'lov muvaffaqiyatli",
+            "message": "Iltimos, buyurtma berishni kuting!"
+        },
+        "notice": {
+            "message": "$value ta bepul izdoshlarni olish uchun avval App Notifice-ni oching.",
+            "turnOn": "Ochiq"
+        }
+    },
+    "coins": {
+        "empty": "Tarix yo'q"
+    },
+    "login": {
+        "confirm": "tasdiqlamoq",
+        "username": "$value ta foydalanuvchi ismingizni kiriting",
+        "channel": "YouTube kanalingizni kiriting",
+        "publicUsername": "* Iltimos, hisobingizni oching",
+        "publicChannel": "* Iltimos, kanalingizni oching",
+        "add": "Hisob qaydnomasini qo'shing",
+        "hintUsername": "foydalanuvchi nomi",
+        "hintChannel": "Kanal havolasi"
+    },
+    "setting": {
+        "title": "sozlash; o'rnatish",
+        "editor": "Ma'lumotni tahrirlash",
+        "daily": "tizimga kirish",
+        "wheel": "Fortune g'ildiragi",
+        "account": "Boshqaruv hisobi",
+        "language": "til",
+        "orders": "Tartib",
+        "faq": "keng tarqalgan muammo",
+        "about": "haqida",
+        "share": {
+            "title": "Ilovani qo'shish",
+            "message": "Men Tiktok muxlislari va yoqtirishlari mumkin bo'lgan xazina dasturini topdim. Quyidagi aloqa o'rnatish orqali biz $value ta oltin tanga olamiz!"
+        },
+        "rateUs": "Bizni baholang"
+    },
+    "language": {
+        "title": "Tilni tanlang",
+        "start": "boshlamoq"
+    },
+    "daily": {
+        "title": "tizimga kirish",
+        "checkIn": "tizimga kirish",
+        "rules": {
+            "title": "qoida",
+            "values": [
+                "Siz har 24 soat ichida tizimga kirishingiz mumkin;",
+                "Kirish Kimga uzilishdan so'ng, u yana boshlanadi."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Fortune g'ildiragi",
+        "rules": {
+            "title": "qoida",
+            "values": [
+                "Har bir lotereya $value ta oltin tanga bo'ladi;",
+                "Chizmalar soni cheklanmagan."
+            ]
+        }
+    },
+    "account": {
+        "title": "Boshqaruv hisobi",
+        "add": "+ Hisob raqamini qo'shing",
+        "empty": "Hisob yo'q",
+        "alert": {
+            "title": "Hisobni o'chirish",
+            "message": "O'chirilgandan so'ng siz tegishli operatsiyalar uchun hisobdan foydalana olmaysiz."
+        }
+    },
+    "orders": {
+        "title": "Tartib",
+        "pending": "Navbat",
+        "processing": "Qayta ishlash",
+        "inProgress": "qayta ishlash",
+        "completed": "tugallangan",
+        "partial": "Qisman tugatish",
+        "error": "Xato",
+        "canceled": "Bekor qilindi",
+        "refunded": "qaytarib berilmagan",
+        "empty": "Buyurtma yo'q"
+    },
+    "faq": {
+        "title": "keng tarqalgan muammo",
+        "values": [
+            {
+                "title": "1. Qanday boshlash kerak?",
+                "value": "Platforma foydalanuvchi nomini sahifangizga ko'ra qo'shing, parol yo'q, parol yo'q, har bir platforma tegishli so'rovga ega."
+            },
+            {
+                "title": "2. Foydalanish xavfsizmi?",
+                "value": "Albatta, bu xavfsizdir. Sizning parolingiz bizga kerak emas, va biz sizning ijtimoiy ariz ma'lumotlarini saqlab qolmaymiz, chunki u boshqa narsalarga e'tibor berish yoki boshqa narsalarga e'tibor berish uchun rasmiy dasturga sakra olmaymiz."
+            },
+            {
+                "title": "3. Bu qanday ishlaydi?",
+                "value": "Ish usuli oddiy: shaxsiy ma'lumotlar / videongiz bizning hamjamiyatimizda namoyish etiladi. Foydalanuvchilar sizning shaxsiy ma'lumotlaringiz tarkibiga qarab sizga e'tibor berishlari kerakmi yoki yo'qmi, ular sizning shaxsiy ma'lumotlaringiz tarkibiga e'tibor berishingizni erkin hal qiladilar.Yoqtirgan varoh sifatida ular oltin tanga oladilar va izdoshlar / sevuvchilar olish uchun ishlatilishi mumkin."
+            },
+            {
+                "title": "4. Diqqat va haqiqiy kabi?",
+                "value": "Albatta, bu haqiqat. Siz bilan tegishli xizmatlarni sotib olganingizda, sizga xizmatlarni taqdim etish uchun juda ko'p foydalanuvchilar mavjud va u rasmiy ilovada ishlaydi. Siz buni rasmiy ilovada amalga oshiriladi. Siz buni rasmiy ilovada amalga oshiriladi. Siz bu haqda tashvishlanishingiz kerak."
+            },
+            {
+                "title": "5. Qanday qilib oltin tanga olaman?",
+                "value": "Bosh sahifada siz Vazifalar ro'yxatini ko'rishingiz mumkin, ko'rish uchun yoki yoqish uchun bosing."
+            },
+            {
+                "title": "6. Nima uchun vazifalar bajarilmayapti?",
+                "value": "Odatda bu siz haqiqatan ham e'tibor bermaysiz yoki unga o'xshamaysiz. Siz avval hisobingizni tekshirishingiz kerak."
+            },
+            {
+                "title": "7. Buyurtmani bajarish qancha davom etadi?",
+                "value": [
+                    "Bu sizning buyurtmangizning hajmiga bog'liq. Odatda, buyurtmani joylashtiring va uni 24 soat ichida bajaring, ammo biz aniq vaqtni bera olmaymiz, chunki orqa tomondan ko'p sonli foydalanuvchilar mavjud. Shuni ta'kidlash kerakki, oltin xizmat oddiy xizmatlardan tezroq.",
+                    "Qisqa vaqt ichida juda ko'p trafik oling, hisobingizni shubhali qiladi, shuning uchun sabr-toqat eng yaxshi usul."
+                ]
+            },
+            {
+                "title": "8. Buyurtmadan keyin nima qilishim kerak?",
+                "value": "Buyurtmani berganingizdan so'ng, hisob qaydnomangizni oshkor qiling. Buyurtma tugashidan oldin foydalanuvchi nomingizni o'zgartirmang."
+            },
+            {
+                "title": "9. Agar muammo bo'lsa nima bo'ladi?",
+                "value": "Ilovada fikr-mulohazalar orqali biz bilan bog'lanishingiz mumkin."
+            }
+        ]
+    },
+    "about": {
+        "title": "haqida",
+        "contact": "Biz bilan bog'lanish",
+        "service": "Xizmat ko'rsatish shartlari",
+        "policy": "Maxfiylik siyosati"
+    },
+    "alert": {
+        "ok": "OK",
+        "cancel": "Bekor qilmoq",
+        "confirm": "tasdiqlamoq"
+    },
+    "toast": {
+        "unpurchase": "Hozirda sotib ololmayapman",
+        "purchasedNotFound": "Joriy xizmatni sotib ololmayman",
+        "payment": "To'lov muvaffaqiyatli!",
+        "coinsNotEnough": "Oltin etarli emas!",
+        "received": "Muvaffaqiyatli qabul qilish!",
+        "adError": "Reklamani tez-tez tomosha qilish, keyinroq qayta urinib ko'ring!"
+    },
+    "localNotification": {
+        "adTaskReady": "Yangi reklama vazifasi tayyor!"
+    }
+}

@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "hubungi kami"
+    },
+    "universal": {
+        "coins": "emas",
+        "requestError": "Silakan coba lagi nanti",
+        "add": "Menambahkan akun"
+    },
+    "tabbar": {
+        "task": "halaman Depan",
+        "store": "toko",
+        "setting": "mempersiapkan"
+    },
+    "task": {
+        "title": "halaman Depan",
+        "skip": "Melompati",
+        "follow": "fokus pada",
+        "like": "Suka",
+        "noTask": "Tidak bertanya",
+        "tip": {
+            "title": "Mengingatkan",
+            "values": [
+                "1. Klik $value tombol",
+                "2. Buka $value",
+                "$value. $value",
+                "4. Kembali ke $value",
+                "5. Dapatkan Koin Emas"
+            ],
+            "message": "Jika Anda membatalkan perhatian/suka, koin emas akan dihapus!"
+        }
+    },
+    "store": {
+        "title": "toko",
+        "free": "Gratis",
+        "follow": "Pengikut",
+        "like": "Suka",
+        "view": "Jam tangan",
+        "share": "Bagikan",
+        "retweet": "Retweet",
+        "ad": {
+            "title": "Hadiah iklan",
+            "watch": "Tonton iklan"
+        },
+        "changeAccount": {
+            "title": "Ubah akun",
+            "add": "Menambahkan akun"
+        },
+        "tip": {
+            "follow": {
+                "title": "Pengikut & Pengikut Senior",
+                "values": [
+                    "",
+                    "Pengikut",
+                    "Pengikut Senior",
+                    "Waktu lengkap",
+                    "1-24 jam",
+                    "1-4 jam",
+                    "Waktu kompensasi",
+                    "/",
+                    "Kompensasi dalam 7 hari",
+                    "Kualitas pengikut",
+                    "nyata",
+                    "Nyata & aktif",
+                    "Drop rate",
+                    "8-15%",
+                    "0-3%"
+                ]
+            },
+            "like": {
+                "title": "Like & Advanced Praise",
+                "values": [
+                    "",
+                    "Suka",
+                    "Pujian tingkat tinggi",
+                    "Waktu lengkap",
+                    "1-24 jam",
+                    "1-4 jam",
+                    "Waktu kompensasi",
+                    "/",
+                    "Kompensasi dalam 7 hari",
+                    "Drop rate",
+                    "8-15%",
+                    "0-3%"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Pembeli",
+            "like": "Beli pujian",
+            "view": "Beli dan Tonton",
+            "share": "Beli dan Bagikan",
+            "retweet": "Beli transfer",
+            "accountPublic": "* Harap jaga agar akun Anda tetap terbuka",
+            "channelPublic": "* Harap tetap buka saluran Anda",
+            "tiktok": "Tautan video Tiktok Anda",
+            "twitter": "Tautan Tweet Twitter Anda",
+            "instagram": "Tautan Posting Instagram Anda",
+            "youtube": "Tautan Saluran YouTube Anda",
+            "pay": "Membayar"
+        },
+        "purchase": {
+            "title": "pembayaran berhasil",
+            "message": "Harap tunggu pesanan selesaikan!"
+        },
+        "notice": {
+            "message": "Untuk mendapatkan $value pengikut gratis, buka pemberitahuan aplikasi terlebih dahulu.",
+            "turnOn": "Membuka"
+        }
+    },
+    "coins": {
+        "empty": "Tidak ada sejarah"
+    },
+    "login": {
+        "confirm": "Konfirmasi",
+        "username": "Masukkan $value nama pengguna Anda",
+        "channel": "Masukkan tautan saluran YouTube Anda",
+        "publicUsername": "* Harap jaga agar akun Anda tetap terbuka",
+        "publicChannel": "* Harap tetap buka saluran Anda",
+        "add": "Menambahkan akun",
+        "hintUsername": "nama belakang",
+        "hintChannel": "Tautan saluran"
+    },
+    "setting": {
+        "title": "mempersiapkan",
+        "editor": "Edit informasi",
+        "daily": "Masuk",
+        "wheel": "Roda keberuntungan",
+        "account": "Akun Manajemen",
+        "language": "bahasa",
+        "orders": "Memesan",
+        "faq": "masalah umum",
+        "about": "tentang",
+        "share": {
+            "title": "Bagikan aplikasi",
+            "message": "Saya menemukan aplikasi harta karun yang bisa mendapatkan penggemar dan suka Tiktok gratis. Melalui instalasi tautan berikut, kami akan mendapatkan $value koin emas!"
+        },
+        "rateUs": "Mengevaluasi kami"
+    },
+    "language": {
+        "title": "Pilih bahasa",
+        "start": "Mulailah"
+    },
+    "daily": {
+        "title": "Masuk",
+        "checkIn": "Masuk",
+        "rules": {
+            "title": "aturan",
+            "values": [
+                "Anda dapat masuk setiap 24 jam;",
+                "Setelah interupsi tanda -dalam, itu akan dimulai lagi."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Roda keberuntungan",
+        "rules": {
+            "title": "aturan",
+            "values": [
+                "Setiap lotre akan menelan biaya $value koin emas;",
+                "Jumlah undian tidak terbatas."
+            ]
+        }
+    },
+    "account": {
+        "title": "Akun Manajemen",
+        "add": "+ Tambahkan nomor akun",
+        "empty": "Tidak ada akun",
+        "alert": {
+            "title": "Hapus akun",
+            "message": "Setelah menghapus, Anda tidak akan dapat menggunakan akun untuk operasi terkait."
+        }
+    },
+    "orders": {
+        "title": "Memesan",
+        "pending": "Antre",
+        "processing": "Pengolahan",
+        "inProgress": "pengolahan",
+        "completed": "lengkap",
+        "partial": "Penyelesaian parsial",
+        "error": "kesalahan",
+        "canceled": "Dibatalkan",
+        "refunded": "dikembalikan",
+        "empty": "Tidak ada pesanan"
+    },
+    "faq": {
+        "title": "masalah umum",
+        "values": [
+            {
+                "title": "1. Bagaimana cara memulai?",
+                "value": "Cukup tambahkan nama pengguna platform Anda sesuai dengan prompt halaman, tidak ada kata sandi, setiap platform memiliki prompt yang sesuai."
+            },
+            {
+                "title": "2. Apakah aman menggunakannya?",
+                "value": "Tentu saja, ini aman. Kami tidak membutuhkan kata sandi Anda, dan kami tidak dapat menyimpan data aplikasi sosial Anda karena melompat ke aplikasi resmi untuk memperhatikan atau melakukan hal -hal lain."
+            },
+            {
+                "title": "3. Bagaimana ini bekerja semuanya?",
+                "value": "Metode kerja sederhana: Data/video pribadi Anda ditampilkan di komunitas kami. Pengguna dengan bebas memutuskan apakah mereka harus memperhatikan/seperti Anda berdasarkan konten data pribadi Anda.Sebagai pertukaran yang disukai/diikuti, mereka akan menerima koin emas dan dapat digunakan untuk mendapatkan pengikut/kekasih."
+            },
+            {
+                "title": "4. Apakah perhatian dan seperti nyata?",
+                "value": "Tentu saja, itu nyata. Ketika Anda membeli layanan terkait, ada banyak pengguna nyata di belakangnya untuk memberi Anda layanan, dan dioperasikan pada aplikasi resmi. Anda tidak perlu khawatir tentang hal itu."
+            },
+            {
+                "title": "5. Bagaimana cara mendapatkan koin emas?",
+                "value": "Di beranda, Anda dapat melihat daftar tugas, klik untuk mengikuti atau menyukai, dan melompat ke aplikasi yang sesuai untuk beroperasi. Harap berhati -hati untuk tidak membatalkan perhatian Anda atau suka, yang akan menyebabkan hadiah Anda dibatalkan."
+            },
+            {
+                "title": "6. Mengapa tugas gagal?",
+                "value": "Ini biasanya karena Anda tidak benar -benar memperhatikan atau menyukainya. Anda harus memeriksa akun Anda terlebih dahulu."
+            },
+            {
+                "title": "7. Berapa lama waktu yang dibutuhkan untuk menyelesaikan pesanan saya?",
+                "value": [
+                    "Ini tergantung pada volume pesanan Anda. Biasanya, Anda akan mulai mendapatkan layanan segera setelah melakukan pemesanan dan menyelesaikannya dalam waktu 24 jam, tetapi kami tidak dapat memberikan waktu yang akurat, karena ada sejumlah besar pengguna nyata yang beroperasi di belakang. Itu harus Tercatat layanan emas lebih cepat dari layanan biasa.",
+                    "Dapatkan terlalu banyak lalu lintas dalam waktu singkat akan membuat akun Anda curiga, jadi menunggu dengan sabar adalah cara terbaik."
+                ]
+            },
+            {
+                "title": "8. Apa yang harus saya lakukan setelah memesan?",
+                "value": "Setelah Anda melakukan pemesanan, simpan akun Anda diungkapkan. Jangan memodifikasi nama pengguna Anda sebelum pesanan selesai."
+            },
+            {
+                "title": "9. Bagaimana jika saya punya masalah?",
+                "value": "Anda dapat menghubungi kami melalui umpan balik di aplikasi."
+            }
+        ]
+    },
+    "about": {
+        "title": "tentang",
+        "contact": "hubungi kami",
+        "service": "Ketentuan Layanan",
+        "policy": "Kebijakan pribadi"
+    },
+    "alert": {
+        "ok": "Oke",
+        "cancel": "Membatalkan",
+        "confirm": "Konfirmasi"
+    },
+    "toast": {
+        "unpurchase": "Tidak dapat membeli saat ini",
+        "purchasedNotFound": "Tidak dapat membeli layanan saat ini",
+        "payment": "pembayaran berhasil!",
+        "coinsNotEnough": "Emas tidak memadai!",
+        "received": "Tanda terima yang berhasil!",
+        "adError": "Menonton iklan terlalu sering, tolong coba lagi nanti!"
+    },
+    "localNotification": {
+        "adTaskReady": "Tugas iklan baru sudah siap!"
+    }
+}

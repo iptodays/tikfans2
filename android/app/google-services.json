@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "694440927821",
+    "project_id": "tikfollower-bd871",
+    "storage_bucket": "tikfollower-bd871.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694440927821:android:378bd51093412f231db204",
+        "android_client_info": {
+          "package_name": "xyz.tikfans2.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694440927821-0i060j5gr15b2sv5kudskks2b2gnq9ek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGwlFhhmYTOd_KW_0vJBTkRGsX8hDcN5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694440927821-0i060j5gr15b2sv5kudskks2b2gnq9ek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

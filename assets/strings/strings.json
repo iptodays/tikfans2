@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "Contact us"
+    },
+    "universal": {
+        "coins": "Coins",
+        "requestError": "Please try again later",
+        "add": "Add Account"
+    },
+    "tabbar": {
+        "task": "Home",
+        "store": "Store",
+        "setting": "Settings"
+    },
+    "task": {
+        "title": "Home",
+        "skip": "Skip",
+        "follow": "Follow",
+        "like": "Like",
+        "noTask": "No Tasks",
+        "tip": {
+            "title": "🎉  Tips",
+            "values": [
+                "1. Click $value button",
+                "2. Open $value",
+                "3. Give $value",
+                "4. Back to $value",
+                "5. Get coins"
+            ],
+            "message": "If unfollow/unlike, coins will be removed!"
+        }
+    },
+    "store": {
+        "title": "Store",
+        "free": "Free",
+        "follow": "Followers",
+        "like": "Likes",
+        "view": "Views",
+        "share": "Shares",
+        "retweet": "Retweets",
+        "ad": {
+            "title": "AD Bouns",
+            "watch": "Watch AD"
+        },
+        "changeAccount": {
+            "title": "Change Account",
+            "add": "Add Account"
+        },
+        "tip": {
+            "follow": {
+                "title": "Followers & Golden Followers",
+                "values": [
+                    "",
+                    "Followers",
+                    "Golden Followers",
+                    "Completion Time",
+                    "1-24 hours",
+                    "1-4 hours",
+                    "Followers Quality",
+                    "Real",
+                    "Real & Active",
+                    "Followers Drop Rate",
+                    "8-15%",
+                    "0-3%",
+                    "Compensation Time",
+                    "/",
+                    "Compensate within 7 days"
+                ]
+            },
+            "like": {
+                "title": "Likes & Golden Likes",
+                "values": [
+                    "",
+                    "Likes",
+                    "Golden Likes",
+                    "Completion Time",
+                    "1-24 hours",
+                    "1-4 hours",
+                    "Likes Drop Rate",
+                    "8-15%",
+                    "0-3%",
+                    "Compensation Time",
+                    "/",
+                    "Compensate within 7 days"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Buy Followers",
+            "like": "Buy Likes",
+            "view": "Buy Views",
+            "share": "Buy Shares",
+            "retweet": "Buy Retweets",
+            "accountPublic": "* Please keep your account public",
+            "channelPublic": "* Please keep your channel public",
+            "tiktok": "Your TikTok video link",
+            "twitter": "Your Twitter tweet link",
+            "instagram": "Your Instagram post link",
+            "youtube": "Your Youtube channel link",
+            "pay": "Pay"
+        },
+        "purchase": {
+            "title": "Purchase Success",
+            "message": "Please wait for the order completion!"
+        },
+        "notice": {
+            "message": "To receive $value free followers, please turn on the notifications.",
+            "turnOn": "Turn On"
+        }
+    },
+    "coins": {
+        "empty": "No History"
+    },
+    "login": {
+        "confirm": "Confirm",
+        "username": "Enter your $value username",
+        "channel": "Enter your Youtube channel link",
+        "publicUsername": "* Please keep your account public",
+        "publicChannel": "* Please keep your channel public",
+        "add": "Add Account",
+        "hintUsername": "username",
+        "hintChannel": "channel link"
+    },
+    "setting": {
+        "title": "Settings",
+        "editor": "Edit Profile",
+        "daily": "Daily Check",
+        "wheel": "Lucky Coins",
+        "account": "Manage account",
+        "language": "Language",
+        "orders": "Orders",
+        "faq": "FAQ",
+        "about": "About",
+        "share": {
+            "title": "Share app",
+            "message": "I found a treasure app that can get free tiktok followers & likes, install the app via the link below, we will both get $value coins!"
+        },
+        "rateUs": "Rate us"
+    },
+    "language": {
+        "title": "Language",
+        "start": "Start"
+    },
+    "daily": {
+        "title": "Daily Check",
+        "checkIn": "Check In",
+        "rules": {
+            "title": "Rules",
+            "values": [
+                "Check-in once every 24 hours;",
+                "Interruptions check-in will be recalculated;"
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Lucky Coins",
+        "rules": {
+            "title": "Rules",
+            "values": [
+                "Each draw consumes $value coins;",
+                "Unlimited number of draws."
+            ]
+        }
+    },
+    "account": {
+        "title": "Manage account",
+        "add": "+ Add Account",
+        "empty": "No Account",
+        "alert": {
+            "title": "Delete Account",
+            "message": "After deletion, you will not be able to use the account for related operations."
+        }
+    },
+    "orders": {
+        "title": "Orders",
+        "pending": "Pending",
+        "processing": "Processing",
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "partial": "Partial",
+        "error": "Error",
+        "canceled": "Canceled",
+        "refunded": "Refunded",
+        "empty": "No Orders"
+    },
+    "faq": {
+        "title": "FAQ",
+        "values": [
+            {
+                "title": "1. How to get started?",
+                "value": "Just follow the page prompts to add your platform username, no password required, each platform has a corresponding prompt."
+            },
+            {
+                "title": "2. Is it safe for me to use?",
+                "value": "Of course yes, we don't need your password, and we can't save your social app data because users are jumping to the official app to follow or do other things."
+            },
+            {
+                "title": "3. How does all this work?",
+                "value": "The way it works is simple: your profile/videos are shown in our community that users freely decide if they want to follow/like you based on the content of your profile. In exchange of a like/follow they receive virtual coins that they can use to get followers/likes."
+            },
+            {
+                "title": "4. Followers and likes are real?",
+                "value": "Of course, when you buy the relevant services, there are a large number of real users behind the service for you, and are operating on the official app, which you do not need to worry about."
+            },
+            {
+                "title": "5. How do I earn coins?",
+                "value": "On the earn page, you can see the current list of tasks, click follow or like to jump to the corresponding app for action, please be careful not to cancel the follow or like, it will cause your rewards to be cancelled."
+            },
+            {
+                "title": "6. Why did the task fail?",
+                "value": "Usually it's because you don't really follow or like, you should check your account."
+            },
+            {
+                "title": "7. How long will it take for my order to be completed?",
+                "value": [
+                    "It depends on the volume of your order, normally, you will start getting the service immediately after placing the order and finish it within 24h, but it is impossible to give an exact time because of the large number of real users operating behind the scenes, it should be noted that the GOLDEN service is more rapid than the regular service.",
+                    "You get too much traffic in a short period of time will cause your account to become suspicious, so waiting patiently is the best way."
+                ]
+            },
+            {
+                "title": "8. What should I do after I place an order?",
+                "value": "Please keep your account public after placing your order, and do not modify your username until your order is complete."
+            },
+            {
+                "title": "9. What if I have a problem?",
+                "value": "You can contact us through the feedback in the app."
+            }
+        ]
+    },
+    "about": {
+        "title": "About",
+        "contact": "Contact us",
+        "service": "Teams of Service",
+        "policy": "Privacy Policy"
+    },
+    "alert": {
+        "ok": "OK",
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+    },
+    "toast": {
+        "unpurchase": "Currently unavailable for purchas",
+        "purchasedNotFound": "The current service cannot be purchased",
+        "payment": "Payment successful",
+        "coinsNotEnough": "Coins not enough!",
+        "received": "Received successfully!",
+        "adError": "Watching ads too often, please try again later!"
+    },
+    "localNotification": {
+        "adTaskReady": "A new advertising task is ready!"
+    }
+}

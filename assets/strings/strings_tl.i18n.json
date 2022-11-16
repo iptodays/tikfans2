@@ -1,0 +1,252 @@
+{
+    "onlyTitle": {
+        "contact": "Makipag-ugnayan sa amin"
+    },
+    "universal": {
+        "coins": "ginto",
+        "requestError": "Subukang muli mamaya",
+        "add": "Magdagdag ng account"
+    },
+    "tabbar": {
+        "task": "unang pahina",
+        "store": "Mamili",
+        "setting": "I -set up"
+    },
+    "task": {
+        "title": "unang pahina",
+        "skip": "tumalon",
+        "follow": "tumuon sa",
+        "like": "gusto",
+        "noTask": "Walang gawain",
+        "tip": {
+            "title": "Prompt",
+            "values": [
+                "1. Mag -click sa $value button",
+                "2. Buksan $value",
+                "$value. $value",
+                "4. Bumalik sa $value",
+                "5. Kumuha ng mga gintong barya"
+            ],
+            "message": "Kung kanselahin mo ang iyong pansin/gusto, aalisin ang mga barya ng ginto!"
+        }
+    },
+    "store": {
+        "title": "Mamili",
+        "free": "libre",
+        "follow": "Mga tagasunod",
+        "like": "gusto",
+        "view": "Panoorin",
+        "share": "ibahagi",
+        "retweet": "Retweet",
+        "ad": {
+            "title": "Gantimpala sa advertising",
+            "watch": "Panoorin ang isang ad"
+        },
+        "changeAccount": {
+            "title": "Baguhin ang account",
+            "add": "Magdagdag ng account"
+        },
+        "tip": {
+            "follow": {
+                "title": "Mga tagasunod at Senior Follower",
+                "values": [
+                    "",
+                    "Mga tagasunod",
+                    "Senior na tagasunod",
+                    "Kumpletuhin ang oras",
+                    "1-24 na oras",
+                    "1-4 na oras",
+                    "Oras ng kabayaran",
+                    "/",
+                    "Kabayaran sa loob ng 7 araw",
+                    "Kalidad ng tagasunod",
+                    "Tunay",
+                    "Tunay at aktibo",
+                    "Drop Rate",
+                    "8-15%",
+                    "0-3%"
+                ]
+            },
+            "like": {
+                "title": "Tulad ng & advanced na papuri",
+                "values": [
+                    "",
+                    "gusto",
+                    "Mataas -level papuri",
+                    "Kumpletuhin ang oras",
+                    "1-24 na oras",
+                    "1-4 na oras",
+                    "Oras ng kabayaran",
+                    "/",
+                    "Kabayaran sa loob ng 7 araw",
+                    "Drop Rate",
+                    "8-15%",
+                    "0-3%"
+                ]
+            }
+        },
+        "buy": {
+            "follow": "Mamimili",
+            "like": "Bumili ng ilang papuri",
+            "view": "Bumili at manood",
+            "share": "Bumili at magbahagi",
+            "retweet": "Bumili ng paglipat",
+            "accountPublic": "* Mangyaring panatilihing bukas ang iyong account",
+            "channelPublic": "* Mangyaring panatilihing bukas ang iyong channel",
+            "tiktok": "Ang iyong Tiktok Video Link",
+            "twitter": "Ang iyong link sa Twitter tweet",
+            "instagram": "Ang iyong link sa post sa Instagram",
+            "youtube": "Ang iyong link sa channel sa YouTube",
+            "pay": "Magbayad"
+        },
+        "purchase": {
+            "title": "matagumpay ang transaksiyon",
+            "message": "Mangyaring maghintay para makumpleto ang order!"
+        },
+        "notice": {
+            "message": "Upang makakuha ng $value libreng mga tagasunod, buksan muna ang abiso sa app.",
+            "turnOn": "Buksan"
+        }
+    },
+    "coins": {
+        "empty": "Walang kasaysayan"
+    },
+    "login": {
+        "confirm": "Kumpirmahin",
+        "username": "Ipasok ang iyong $value pangalan ng gumagamit",
+        "channel": "Ipasok ang iyong link sa channel sa YouTube",
+        "publicUsername": "* Mangyaring panatilihing bukas ang iyong account",
+        "publicChannel": "* Mangyaring panatilihing bukas ang iyong channel",
+        "add": "Magdagdag ng account",
+        "hintUsername": "Username",
+        "hintChannel": "Link ng Channel"
+    },
+    "setting": {
+        "title": "I -set up",
+        "editor": "I -edit ang impormasyon",
+        "daily": "Mag -sign in",
+        "wheel": "Gulong ng kapalaran",
+        "account": "Pamamahala ng account",
+        "language": "Wika",
+        "orders": "Order",
+        "faq": "karaniwang problema",
+        "about": "tungkol sa",
+        "share": {
+            "title": "Ibahagi ang app",
+            "message": "Natagpuan ko ang isang application ng kayamanan na maaaring makakuha ng libreng mga tagahanga ng Tiktok at gusto. Sa pamamagitan ng sumusunod na pag -install ng link, makakakuha kami ng $value gintong barya!"
+        },
+        "rateUs": "Suriin kami"
+    },
+    "language": {
+        "title": "Pumili ng isang wika",
+        "start": "magsimula"
+    },
+    "daily": {
+        "title": "Mag -sign in",
+        "checkIn": "Mag -sign in",
+        "rules": {
+            "title": "panuntunan",
+            "values": [
+                "Maaari kang mag -sign in bawat 24 na oras;",
+                "Matapos ang pagkagambala sa pag -sign -in, magsisimula ulit ito."
+            ]
+        }
+    },
+    "wheel": {
+        "title": "Gulong ng kapalaran",
+        "rules": {
+            "title": "panuntunan",
+            "values": [
+                "Ang bawat loterya ay nagkakahalaga ng $value gintong barya;",
+                "Ang bilang ng mga draw ay hindi limitado."
+            ]
+        }
+    },
+    "account": {
+        "title": "Pamamahala ng account",
+        "add": "+ Magdagdag ng numero ng account",
+        "empty": "Walang account",
+        "alert": {
+            "title": "Tanggalin ang account",
+            "message": "Matapos matanggal, hindi mo magagamit ang account para sa mga kaugnay na operasyon."
+        }
+    },
+    "orders": {
+        "title": "Order",
+        "pending": "Pila",
+        "processing": "Pagproseso",
+        "inProgress": "pagproseso",
+        "completed": "nakumpleto",
+        "partial": "Bahagyang pagkumpleto",
+        "error": "pagkakamali",
+        "canceled": "Kanselahin",
+        "refunded": "na -refund",
+        "empty": "Walang kaayusan"
+    },
+    "faq": {
+        "title": "karaniwang problema",
+        "values": [
+            {
+                "title": "1. Paano magsisimula?",
+                "value": "Idagdag lamang ang iyong pangalan ng gumagamit ng platform ayon sa mga senyas ng pahina, walang password, ang bawat platform ay may kaukulang prompt."
+            },
+            {
+                "title": "2. Ligtas bang gamitin ito?",
+                "value": "Siyempre, ligtas ito. Hindi namin kailangan ang iyong password, at hindi namin mai -save ang iyong data sa application ng lipunan dahil tumatalon ito sa opisyal na aplikasyon upang bigyang -pansin o gumawa ng iba pang mga bagay."
+            },
+            {
+                "title": "3. Paano ito gumagana?",
+                "value": "Ang pamamaraan ng trabaho ay simple: ang iyong personal na data/video ay ipinapakita sa aming komunidad. Malayang magpasya ang mga gumagamit kung dapat bang bigyang pansin ang/tulad mo batay sa nilalaman ng iyong personal na data.Bilang isang palitan na gusto/sundin, makakatanggap sila ng mga gintong barya at maaaring magamit upang makakuha ng mga tagasunod/mahilig."
+            },
+            {
+                "title": "4. Ang pansin ba at totoo?",
+                "value": "Siyempre, ito ay totoo. Kapag bumili ka ng mga kaugnay na serbisyo, maraming mga tunay na gumagamit sa likod nito upang mabigyan ka ng mga serbisyo, at pinatatakbo ito sa opisyal na app. Hindi mo kailangang mag -alala tungkol dito."
+            },
+            {
+                "title": "5. Paano ako makakakuha ng mga gintong barya?",
+                "value": "Sa homepage, maaari mong makita ang listahan ng gawain, i -click upang sundin o gusto, at tumalon sa kaukulang app para sa operasyon. Mangyaring mag -ingat na huwag kanselahin ang iyong pansin o gusto, na magiging sanhi ng pagkansela ng iyong gantimpala."
+            },
+            {
+                "title": "6. Bakit nabigo ang mga gawain?",
+                "value": "Ito ay karaniwang dahil hindi ka talaga nagbabayad ng pansin o gusto mo. Dapat mo munang suriin ang iyong account."
+            },
+            {
+                "title": "7. Gaano katagal bago makumpleto ang aking order?",
+                "value": [
+                    "Ito ay nakasalalay sa dami ng iyong order. Karaniwan, sisimulan mong makuha ang serbisyo kaagad pagkatapos ilagay ang order at kumpletuhin ito sa loob ng 24h, ngunit hindi namin mabigyan ng tumpak na oras, dahil mayroong isang malaking bilang ng mga tunay na gumagamit na nagpapatakbo sa likod ng likuran. Dapat ito Mapapansin ang gintong serbisyo ay mas mabilis kaysa sa mga ordinaryong serbisyo.",
+                    "Kumuha ng labis na trapiko sa isang maikling panahon ay gagawing kahina -hinala ang iyong account, kaya ang paghihintay nang matiyaga ay ang pinakamahusay na paraan."
+                ]
+            },
+            {
+                "title": "8. Ano ang dapat kong gawin pagkatapos mag -order?",
+                "value": "Matapos mong ilagay ang iyong order, panatilihing isiwalat ang iyong account. Huwag baguhin ang iyong username bago makumpleto ang order."
+            },
+            {
+                "title": "9. Paano kung may problema ako?",
+                "value": "Maaari kang makipag -ugnay sa amin sa pamamagitan ng feedback sa app."
+            }
+        ]
+    },
+    "about": {
+        "title": "tungkol sa",
+        "contact": "Makipag-ugnayan sa amin",
+        "service": "Mga Tuntunin ng Serbisyo",
+        "policy": "Patakaran sa Pagkapribado"
+    },
+    "alert": {
+        "ok": "OK",
+        "cancel": "Kanselahin",
+        "confirm": "Kumpirmahin"
+    },
+    "toast": {
+        "unpurchase": "Hindi mabibili ngayon",
+        "purchasedNotFound": "Hindi mabibili ang kasalukuyang serbisyo",
+        "payment": "matagumpay ang transaksiyon!",
+        "coinsNotEnough": "Hindi sapat ang ginto!",
+        "received": "Matagumpay na resibo!",
+        "adError": "Madalas ang panonood ng mga ad, mangyaring subukang muli sa ibang pagkakataon!"
+    },
+    "localNotification": {
+        "adTaskReady": "Handa na ang bagong gawain sa advertising!"
+    }
+}
