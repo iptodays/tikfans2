@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-19 22:35:03
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-16 16:08:34
+ * @LastEditTime: 2022-11-16 19:46:12
  * @FilePath: /tikfans2/lib/logic/ad.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -113,7 +113,6 @@ class ADLogic extends IGetxController {
       },
       onFailed: (placementId, error, errorMessage) {
         EasyLoading.showToast(translate.toast.adError);
-        _notification();
       },
     );
   }

@@ -38,8 +38,6 @@ dependencies:
   package_info_plus: ^3.0.1
   # https://pub.dev/packages/device_info_plus
   device_info_plus: ^8.0.0
-  # https://pub.dev/packages/path_provider
-  # path_provider: ^2.0.11
   # https://pub.dev/packages/flutter_udid
   flutter_udid: ^2.0.0
   # https://pub.dev/packages/auto_size_text

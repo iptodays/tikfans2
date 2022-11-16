@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 16:35:23
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-16 15:59:57
+ * @LastEditTime: 2022-11-16 19:34:55
  * @FilePath: /tikfans2/lib/logic/splash.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -11,12 +11,10 @@ import 'package:tikfans2/utils/config/config.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
 import 'package:tikfans2/utils/routes/routes.dart';
 import 'package:tikfans2/widgets/general.dart';
-import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 
 class SplashLogic extends IGetxController {
   @override
   void onReady() async {
-    await UnityAds.init(gameId: '5022687');
     await AppConfig.instance.getSettings();
     _goToMain();
     super.onReady();

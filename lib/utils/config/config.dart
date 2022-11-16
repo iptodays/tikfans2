@@ -19,13 +19,13 @@ import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:flutter_udid/flutter_udid.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:tikfans2/models/setting.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/api/api.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
 import 'package:timezone/data/latest_all.dart';
 import 'package:timezone/timezone.dart';
+import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 
 class AppConfig {
   AppConfig._();
@@ -41,10 +41,6 @@ class AppConfig {
   /// 应用信息
   PackageInfo get package => _package;
   late final PackageInfo _package;
-
-  /// 应用文档路径
-  Directory get applicationDocumentsDirectory => _applicationDocumentsDirectory;
-  late final Directory _applicationDocumentsDirectory;
 
   /// k/v storage
   GetStorage get box => _box;
@@ -170,6 +166,16 @@ class AppConfig {
     await box.write('openCount', (box.read('openCount') ?? 0) + 1);
     _timezone = await FlutterNativeTimezone.getLocalTimezone();
     _locale = WidgetsBinding.instance.window.locale.toString();
+    await UnityAds.init(
+      gameId: '5022687',
+      testMode: kDebugMode,
+      onComplete: () {
+        LogUtil.v('UnityAds 初始化成功');
+      },
+      onFailed: (error, errorMessage) {
+        LogUtil.v('UnityAds 初始化失败: $errorMessage');
+      },
+    );
     initializeTimeZones();
     setLocalLocation(getLocation(timezone));
     if (box.hasData('x-app-lang')) {
@@ -214,8 +220,6 @@ class AppConfig {
       }
       await box.write('udid', _udid);
     }
-    _applicationDocumentsDirectory = await getApplicationDocumentsDirectory();
-    LogUtil.v(_applicationDocumentsDirectory.path);
     FirebaseCrashlytics.instance
       ..setUserIdentifier(udid)
       ..setCrashlyticsCollectionEnabled(
