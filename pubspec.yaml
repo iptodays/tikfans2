@@ -2,7 +2,7 @@ name: tikfans2
 description: A new Flutter project.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.1+2
 environment:
   sdk: '>=2.18.4 <3.0.0'
 
@@ -35,11 +35,11 @@ dependencies:
   # https://pub.dev/packages/flutter_easyloading
   flutter_easyloading: ^3.0.5
   # https://pub.dev/packages/package_info_plus
-  package_info_plus: ^3.0.1
+  package_info_plus: ^3.0.2
   # https://pub.dev/packages/device_info_plus
   device_info_plus: ^8.0.0
   # https://pub.dev/packages/flutter_udid
-  flutter_udid: ^2.0.0
+  flutter_udid: ^2.0.1
   # https://pub.dev/packages/auto_size_text
   auto_size_text: ^3.0.0
   # https://pub.dev/packages/styled_text
@@ -49,15 +49,15 @@ dependencies:
   # https://pub.dev/packages/flutter_app_badger
   flutter_app_badger: ^1.5.0
   # https://pub.dev/packages/flutter_local_notifications
-  flutter_local_notifications: ^12.0.3
+  flutter_local_notifications: ^12.0.3+1
   # https://pub.dev/packages/firebase_core
-  firebase_core: ^2.1.1
+  firebase_core: ^2.3.0
   # https://pub.dev/packages/firebase_messaging
-  firebase_messaging: ^14.0.4
+  firebase_messaging: ^14.1.1
   # https://pub.dev/packages/firebase_analytics
-  firebase_analytics: ^10.0.4
+  firebase_analytics: ^10.0.6
   # https://pub.dev/packages/firebase_crashlytics
-  firebase_crashlytics: ^3.0.4
+  firebase_crashlytics: ^3.0.6
   # https://pub.dev/packages/google_sign_in
   google_sign_in: ^5.4.2
   # https://pub.dev/packages/unity_ads_plugin
@@ -71,13 +71,13 @@ dependencies:
   # https://pub.dev/packages/timezone
   timezone: ^0.9.0
   # https://pub.dev/packages/popover
-  popover: ^0.2.6+3
+  popover: ^0.2.7
   # https://pub.dev/packages/android_play_install_referrer
   android_play_install_referrer: ^0.2.1
   # https://pub.dev/packages/flutter_keyboard_visibility
   flutter_keyboard_visibility: ^5.4.0
   # https://pub.dev/packages/easy_refresh
-  easy_refresh: ^3.0.4+3
+  easy_refresh: ^3.0.4+4
   # https://pub.dev/packages/flutter_fortune_wheel
   flutter_fortune_wheel: ^1.2.0
   # https://pub.dev/packages/slide_countdown  
@@ -85,9 +85,9 @@ dependencies:
   # https://pub.dev/packages/flutter_mailer
   flutter_mailer: ^2.0.1
   # https://pub.dev/packages/slang
-  slang: ^3.3.1
+  slang: ^3.4.0
   # https://pub.dev/packages/slang_flutter
-  slang_flutter: ^3.3.0
+  slang_flutter: ^3.4.0
   # https://pub.dev/packages/flutter_spinkit
   flutter_spinkit: ^5.1.0
   # https://pub.dev/packages/app_settings
@@ -95,7 +95,7 @@ dependencies:
   # https://pub.dev/packages/permission_handler
   permission_handler: ^10.2.0
   # https://pub.dev/packages/share_plus
-  share_plus: ^6.2.0
+  share_plus: ^6.3.0
 
 # dependency_overrides:
 #   get: ^5.0.0-beta.52
@@ -105,11 +105,11 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^1.0.0
   # https://pub.dev/packages/flutter_native_splash
-  flutter_native_splash: ^2.2.13
+  flutter_native_splash: ^2.2.14
   # https://pub.dev/packages/build_runner
   build_runner: ^2.3.2
   # https://pub.dev/packages/slang_build_runner
-  slang_build_runner: ^3.3.0
+  slang_build_runner: ^3.4.0
   
 
 flutter:

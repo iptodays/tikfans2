@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-19 22:35:03
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-16 19:46:12
+ * @LastEditTime: 2022-11-20 16:35:04
  * @FilePath: /tikfans2/lib/logic/ad.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -125,8 +125,12 @@ class ADLogic extends IGetxController {
         'id': '${model.value!.id}',
       },
     );
+
     if (response.isOk) {
+      EasyLoading.dismiss();
       logic.updateCoins(response.result);
+    } else {
+      EasyLoading.showToast(response.message);
     }
     _notification();
   }
