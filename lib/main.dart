@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 15:21:41
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-16 15:13:18
+ * @LastEditTime: 2022-12-03 16:34:14
  * @FilePath: /tikfans2/lib/main.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:tikfans2/logic/billing_client.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/config/config.dart';
 import 'package:tikfans2/utils/routes/routes.dart';
@@ -42,6 +43,7 @@ class App extends StatelessWidget {
       supportedLocales: LocaleSettings.supportedLocales,
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
       initialRoute: AppRoutes.splash,
+      initialBinding: AppBinding(),
       getPages: AppRoutes.pages,
       builder: EasyLoading.init(
         builder: (BuildContext context, Widget? child) {
@@ -99,5 +101,12 @@ class App extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AppBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.put(BillingClientLogic());
   }
 }

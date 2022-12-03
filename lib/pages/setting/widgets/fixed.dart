@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-04 14:31:13
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-06 15:08:25
- * @FilePath: /tikfans/lib/pages/setting/widgets/fixed.dart
+ * @LastEditTime: 2022-12-03 16:36:11
+ * @FilePath: /tikfans2/lib/pages/setting/widgets/fixed.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -18,7 +18,7 @@ class SFixedView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<String> labels = [
       '',
-      AppRoutes.editor,
+      // AppRoutes.editor,
       AppRoutes.account,
       '',
       AppRoutes.language,
