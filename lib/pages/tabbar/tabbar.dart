@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 16:37:19
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-09-30 19:35:56
- * @FilePath: /tikfans/lib/pages/tabbar/tabbar.dart
+ * @LastEditTime: 2022-12-11 22:47:27
+ * @FilePath: /tikfans2/lib/pages/tabbar/tabbar.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -12,19 +12,18 @@ import 'package:flutter_svg/svg.dart';
 import 'package:tikfans2/logic/tabbar.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
+import 'package:tikfans2/utils/getx/view.dart';
 
-class TabBarPage extends StatelessWidget {
-  TabBarPage({super.key});
-
-  final TabBarLogic logic = Get.put(TabBarLogic());
+class TabBarPage extends IGetView<TabBarController> {
+  const TabBarPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
-        controller: logic.controller,
-        children: logic.children,
+        controller: controller.pageController,
+        children: controller.children,
       ),
       bottomNavigationBar: bottomNavigationBarBuilder(),
     );
@@ -33,9 +32,9 @@ class TabBarPage extends StatelessWidget {
   Widget bottomNavigationBarBuilder() {
     return Obx(() {
       return _BottomNavigationBar(
-        index: logic.cIndex.value,
-        onTap: logic.onTap,
-        labels: logic.labels,
+        index: controller.cIndex.value,
+        onTap: controller.onTap,
+        labels: controller.labels,
       );
     });
   }

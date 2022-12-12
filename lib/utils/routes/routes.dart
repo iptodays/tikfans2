@@ -2,12 +2,13 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 16:17:59
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-06 14:50:32
- * @FilePath: /tikfans/lib/utils/routes/routes.dart
+ * @LastEditTime: 2022-12-12 16:34:57
+ * @FilePath: /tikfans2/lib/utils/routes/routes.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
 import 'package:get/get.dart';
+import 'package:tikfans2/bindings/splash.dart';
 import 'package:tikfans2/pages/contact/contact.dart';
 import 'package:tikfans2/pages/about/about.dart';
 import 'package:tikfans2/pages/account/account.dart';
@@ -59,8 +60,12 @@ class AppRoutes {
   static const String contact = '/contact';
 
   static List<GetPage> pages = [
-    GetPage(name: splash, page: () => const SplashPage()),
-    GetPage(name: tabbar, page: () => TabBarPage()),
+    GetPage(
+      name: splash,
+      page: () => const SplashPage(),
+      binding: SplashBinding(),
+    ),
+    GetPage(name: tabbar, page: () => const TabBarPage()),
     GetPage(name: coinLog, page: () => CoinLogPage()),
     GetPage(name: daily, page: () => DailyPage()),
     GetPage(name: wheel, page: () => WheelPage()),

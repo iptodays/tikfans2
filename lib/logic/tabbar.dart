@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 16:37:58
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-10-10 10:41:20
- * @FilePath: /tikfans/lib/logic/tabbar.dart
+ * @LastEditTime: 2022-12-11 22:46:57
+ * @FilePath: /tikfans2/lib/logic/tabbar.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -13,8 +13,8 @@ import 'package:tikfans2/pages/store/store.dart';
 import 'package:tikfans2/pages/task/task.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
 
-class TabBarLogic extends IGetxController {
-  final PageController controller = PageController();
+class TabBarController extends IGetxController {
+  final PageController pageController = PageController();
 
   /// 当前选中下标
   final RxInt cIndex = 0.obs;
@@ -34,6 +34,6 @@ class TabBarLogic extends IGetxController {
   /// 点击事件
   void onTap(int index) {
     cIndex.trigger(index);
-    controller.jumpToPage(index);
+    pageController.jumpToPage(index);
   }
 }

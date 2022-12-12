@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-03 18:41:57
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-16 16:10:04
+ * @LastEditTime: 2022-12-12 16:45:50
  * @FilePath: /tikfans2/lib/logic/coins.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -69,6 +69,8 @@ class CoinsLogic extends FullLifeCycleController with FullLifeCycleMixin {
     EasyLoading.dismiss();
     if (response.isOk) {
       updateCoins(response.result);
+    } else {
+      EasyLoading.showToast(response.message);
     }
     _taskLogic.nextTask();
   }
