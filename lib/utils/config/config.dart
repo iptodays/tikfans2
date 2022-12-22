@@ -239,8 +239,7 @@ class AppConfig {
   /// 获取设置
   Future<void> getSettings() async {
     if (_retry == 6) {
-      _setting = SettingModel(isInReviewing: true);
-      return;
+      exit(0);
     }
     Map<String, String?> data = {};
     if (!box.hasData('installReferrer')) {
