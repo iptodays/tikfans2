@@ -3,7 +3,7 @@
  * @Date: 2022-09-01 16:19:47
  * @LastEditors: iptoday wangdong1221@outlook.com
  * @LastEditTime: 2022-09-13 19:00:12
- * @FilePath: /tikfans/lib/widgets/scaffold.dart
+ * @FilePath: /tikfans2/lib/widgets/scaffold.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */

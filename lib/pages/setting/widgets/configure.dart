@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-04 14:43:25
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-10-12 12:43:30
- * @FilePath: /tikfans/lib/pages/setting/widgets/configure.dart
+ * @LastEditTime: 2023-01-06 14:53:44
+ * @FilePath: /tikfans2/lib/pages/setting/widgets/configure.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -14,7 +14,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:styled_text/styled_text.dart';
-import 'package:tikfans2/logic/setting.dart';
+import 'package:tikfans2/logic/rate_us.dart';
 import 'package:tikfans2/pages/setting/widgets/item.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/config/config.dart';
@@ -72,12 +72,12 @@ class SConfigureView extends StatelessWidget {
 }
 
 class _RateUs extends StatelessWidget {
-  final SettingLogic logic = Get.find<SettingLogic>();
+  final RateUsLogic logic = Get.find<RateUsLogic>();
 
   @override
   Widget build(BuildContext context) {
     return IButton(
-      onTap: logic.rateUs,
+      onTap: logic.onRateUs,
       child: Container(
         height: 56,
         decoration: BoxDecoration(

@@ -3,7 +3,7 @@
  * @Date: 2022-09-03 20:56:06
  * @LastEditors: iptoday wangdong1221@outlook.com
  * @LastEditTime: 2022-10-17 21:53:23
- * @FilePath: /tikfans/lib/pages/coin_log/coin_log.dart
+ * @FilePath: /tikfans2/lib/pages/coin_log/coin_log.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */

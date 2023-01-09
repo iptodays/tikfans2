@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-04 21:41:47
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-09-12 16:28:49
- * @FilePath: /tikfans/lib/pages/setting/widgets/apps.dart
+ * @LastEditTime: 2023-01-06 18:56:20
+ * @FilePath: /tikfans2/lib/pages/setting/widgets/apps.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -16,7 +16,6 @@ import 'package:tikfans2/utils/config/config.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
 import 'package:tikfans2/widgets/button.dart';
 import 'package:tikfans2/widgets/image.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class AppsView extends StatelessWidget {
   const AppsView({super.key});
@@ -47,17 +46,7 @@ class _AppItem extends StatelessWidget {
       init: logic,
       builder: (_) {
         return IButton(
-          onTap: () {
-            if (model.coins > 0) {
-              logic.setModel(model);
-            }
-            if (model.url != null) {
-              launchUrlString(
-                model.url!,
-                mode: LaunchMode.externalApplication,
-              );
-            }
-          },
+          onTap: () => logic.execution(model),
           child: SizedBox(
             height: 68,
             child: Row(

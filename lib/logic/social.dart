@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-05 21:48:24
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-11-16 17:10:48
+ * @LastEditTime: 2023-01-06 15:05:12
  * @FilePath: /tikfans2/lib/logic/social.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -95,9 +95,9 @@ class SocialLogic extends IGetxController {
     EasyLoading.show();
     Response response = await Api().request(
       '/Platform.getUser',
-      platform: p,
       data: {
         'link': link,
+        'platform': p,
       },
     );
     if (response.isOk) {

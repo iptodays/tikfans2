@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-04 10:12:05
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-10-06 10:02:41
- * @FilePath: /tikfans/lib/pages/setting/widgets/welfare.dart
+ * @LastEditTime: 2023-01-06 15:46:01
+ * @FilePath: /tikfans2/lib/pages/setting/widgets/welfare.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -12,7 +12,7 @@ import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:slide_countdown/slide_countdown.dart';
-import 'package:tikfans2/logic/setting.dart';
+import 'package:tikfans2/logic/daily.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/config/config.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
@@ -90,7 +90,7 @@ class SWelfareView extends StatelessWidget {
 }
 
 class _DailyView extends StatelessWidget {
-  final SettingLogic logic = Get.find<SettingLogic>();
+  final DailyLogic logic = Get.find<DailyLogic>();
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +116,7 @@ class _DailyView extends StatelessWidget {
               ),
             );
             return Opacity(
-              opacity: logic.hasCheckedIn.isTrue ? 0.5 : 1,
+              opacity: logic.enabled.isFalse ? 0.5 : 1,
               child: Row(
                 children: [
                   Image.asset(
@@ -127,7 +127,7 @@ class _DailyView extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 12),
-                      child: logic.hasCheckedIn.isFalse
+                      child: logic.enabled.isTrue
                           ? text
                           : Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -139,10 +139,8 @@ class _DailyView extends StatelessWidget {
                                   padding: const EdgeInsets.only(top: 4),
                                   decoration: const BoxDecoration(),
                                   duration: Duration(
-                                    milliseconds: AppConfig
-                                            .instance
-                                            .checkInTime!
-                                            .millisecondsSinceEpoch -
+                                    milliseconds: AppConfig.instance.box
+                                            .read('dailyCheckIn') -
                                         DateUtil.getNowDateMs(),
                                   ),
                                   textStyle: const TextStyle(
@@ -150,7 +148,6 @@ class _DailyView extends StatelessWidget {
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600,
                                   ),
-                                  onDone: logic.resetCheckIn,
                                 ),
                               ],
                             ),

@@ -2,21 +2,22 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 16:10:49
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-12-16 13:18:22
+ * @LastEditTime: 2023-01-07 20:25:30
  * @FilePath: /tikfans2/lib/utils/api/api_interceptors.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
 import 'dart:convert';
 import 'dart:io';
+
+import 'package:common_utils/common_utils.dart';
+import 'package:dio/dio.dart';
+import 'package:steel_crypt/steel_crypt.dart';
+import 'package:tikfans2/utils/config/config.dart';
 // ignore: depend_on_referenced_packages
 import 'package:convert/convert.dart';
 // ignore: depend_on_referenced_packages
 import 'package:crypto/crypto.dart';
-
-import 'package:dio/dio.dart';
-import 'package:steel_crypt/steel_crypt.dart';
-import 'package:tikfans2/utils/config/config.dart';
 
 class ApiInterceptors extends InterceptorsWrapper {
   @override
@@ -41,22 +42,24 @@ class ApiInterceptors extends InterceptorsWrapper {
     params['deviceId'] = AppConfig.instance.udid;
     params['bundleId'] = AppConfig.instance.package.packageName;
     params['version'] = AppConfig.instance.package.version;
-    params['ts'] = ts;
-    String json = jsonEncode(params);
-    String crypted = _AesCryptUtils.encrypt(json);
-    options.path = '/';
-    options.data = crypted;
+    params['ts'] = '${DateTime.now().millisecondsSinceEpoch}';
     List<String> keys = options.headers.keys
-        .where((element) => element.startsWith('x-app'))
+        .where((element) =>
+            element.startsWith('x-app') && element != 'x-app-platform')
         .toList();
     keys.sort((a, b) => a.compareTo(b));
     String val = '';
     for (var key in keys) {
-      val += options.headers[key];
+      val += options.headers[key]!;
     }
     val += ts;
     options.headers['x-app-checksum'] =
         hex.encode(md5.convert(const Utf8Encoder().convert(val)).bytes);
+    LogUtil.v('params: $params headers:${options.headers}');
+    String json = jsonEncode(params);
+    String crypted = _AesCryptUtils.encrypt(json);
+    options.path = '/';
+    options.data = crypted;
     return super.onRequest(options, handler);
   }
 

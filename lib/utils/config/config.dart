@@ -1,9 +1,9 @@
+import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
-import 'dart:math';
 
 import 'package:android_play_install_referrer/android_play_install_referrer.dart';
 import 'package:common_utils/common_utils.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -12,20 +12,18 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app_badger/flutter_app_badger.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_mailer/flutter_mailer.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:flutter_udid/flutter_udid.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:tikfans2/models/global_tip.dart';
 import 'package:tikfans2/models/setting.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/api/api.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
-import 'package:timezone/data/latest_all.dart';
-import 'package:timezone/timezone.dart';
-import 'package:unity_ads_plugin/unity_ads_plugin.dart';
+import 'package:tikfans2/widgets/general.dart';
 
 class AppConfig {
   AppConfig._();
@@ -33,10 +31,10 @@ class AppConfig {
   static final AppConfig _instance = AppConfig._();
 
   /// 设备信息
-  AndroidDeviceInfo? get android => _android;
-  late final AndroidDeviceInfo? _android;
-  IosDeviceInfo? get ios => _ios;
-  late final IosDeviceInfo? _ios;
+  AndroidDeviceInfo get android => _android;
+  late final AndroidDeviceInfo _android;
+  IosDeviceInfo get ios => _ios;
+  late final IosDeviceInfo _ios;
 
   /// 应用信息
   PackageInfo get package => _package;
@@ -61,10 +59,6 @@ class AppConfig {
   late final String _timezone;
   String get timezone => _timezone;
 
-  /// 是否启用本地推送
-  bool get enabledLocalNotification => _enabledLocalNotification;
-  late final bool _enabledLocalNotification;
-
   /// 应用启动时间戳
   String get timestamp => box.read('timestamp');
 
@@ -74,32 +68,24 @@ class AppConfig {
   /// 推送
   FirebaseMessaging get messaging => FirebaseMessaging.instance;
 
-  /// 本地推送
-  FlutterLocalNotificationsPlugin get localNotifications => _localNotifications;
-  late final FlutterLocalNotificationsPlugin _localNotifications;
-
   /// 基础数据模型
   SettingModel get setting => _setting;
   late SettingModel _setting;
 
-  /// 下次签到时间
-  DateTime? checkInTime;
-
-  /// 网络状态
-  late ConnectivityResult connectivityResult;
-
   /// 重试次数
   int _retry = 1;
+
+  /// 支付事件流
+  StreamSubscription<List<PurchaseDetails>>? _subscription;
 
   /// 初始化信息
   Future<void> initialize(VoidCallback callback) async {
     WidgetsFlutterBinding.ensureInitialized();
-    Connectivity connectivity = Connectivity();
-    connectivityResult = await connectivity.checkConnectivity();
-    connectivity.onConnectivityChanged.listen(_onConnectivityChanged);
     await Firebase.initializeApp();
-    await getInformation();
     callback();
+    _subscription = InAppPurchase.instance.purchaseStream.listen(
+      _purchaseStreamUpdate,
+    );
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -114,51 +100,8 @@ class AppConfig {
     ]);
   }
 
-  /// 配置推送
-  Future<void> notificationSettings() async {
-    NotificationSettings settings = await messaging.requestPermission();
-    switch (settings.authorizationStatus) {
-      case AuthorizationStatus.authorized:
-      case AuthorizationStatus.provisional:
-        String? token = await messaging.getToken();
-        if (token != null) {
-          await box.write('x-app-pushToken', token);
-        }
-        break;
-      default:
-        await box.remove('x-app-pushToken');
-    }
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      LogUtil.v('Got a message whilst in the foreground!');
-      LogUtil.v('Message data: ${message.data}');
-      if (message.notification != null) {
-        LogUtil.v(
-          'Message also contained a notification: ${message.notification}',
-        );
-        RemoteNotification remoteNotification = message.notification!;
-        localNotifications.show(
-          Random().nextInt(9999),
-          remoteNotification.title,
-          remoteNotification.body,
-          NotificationDetails(
-            android: AndroidNotificationDetails(
-              remoteNotification.android?.channelId ??
-                  '${DateUtil.getNowDateMs()}',
-              'firebase message',
-              importance: Importance.max,
-              priority: Priority.high,
-            ),
-          ),
-        );
-      }
-    });
-    messaging.onTokenRefresh.listen((fcmToken) async {
-      await box.write('x-app-pushToken', fcmToken);
-    });
-  }
-
   /// 初始化基础信息
-  Future<void> getInformation() async {
+  Future<void> registerPlugin() async {
     LogUtil.init(isDebug: kDebugMode);
     await GetStorage.init();
     _box = GetStorage();
@@ -166,24 +109,11 @@ class AppConfig {
     await box.write('openCount', (box.read('openCount') ?? 0) + 1);
     _timezone = await FlutterNativeTimezone.getLocalTimezone();
     _locale = WidgetsBinding.instance.window.locale.toString();
-    await UnityAds.init(
-      gameId: '5022687',
-      testMode: kDebugMode,
-      onComplete: () {
-        LogUtil.v('UnityAds 初始化成功');
-      },
-      onFailed: (error, errorMessage) {
-        LogUtil.v('UnityAds 初始化失败: $errorMessage');
-      },
-    );
-    initializeTimeZones();
-    setLocalLocation(getLocation(timezone));
     if (box.hasData('x-app-lang')) {
       LocaleSettings.setLocaleRaw(box.read('x-app-lang'));
       Get.updateLocale(Locale(box.read('x-app-lang')));
     }
     _package = await PackageInfo.fromPlatform();
-    _localNotifications = FlutterLocalNotificationsPlugin();
     if (Platform.isIOS) {
       _ios = await DeviceInfoPlugin().iosInfo;
       SystemChrome.setSystemUIOverlayStyle(
@@ -191,11 +121,6 @@ class AppConfig {
       );
     } else if (Platform.isAndroid) {
       _android = await DeviceInfoPlugin().androidInfo;
-      _enabledLocalNotification = await localNotifications
-              .resolvePlatformSpecificImplementation<
-                  AndroidFlutterLocalNotificationsPlugin>()
-              ?.areNotificationsEnabled() ??
-          false;
       SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
@@ -203,18 +128,11 @@ class AppConfig {
         ),
       );
     }
-    localNotifications.initialize(
-      const InitializationSettings(
-        android: AndroidInitializationSettings(
-          'ic_notification',
-        ),
-      ),
-    );
     if (box.hasData('udid')) {
       _udid = box.read('udid');
     } else {
       if (kDebugMode) {
-        _udid = '123456_${DateTime.now().millisecondsSinceEpoch}';
+        _udid = '${package.appName}_123456';
       } else {
         _udid = await FlutterUdid.consistentUdid;
       }
@@ -229,11 +147,33 @@ class AppConfig {
       ..logAppOpen()
       ..setUserId(id: udid)
       ..setAnalyticsCollectionEnabled(!kDebugMode);
-    notificationSettings();
-    // await ImobileAds.initialize(
-    //   testMode: kDebugMode,
-    //   unityId: '4179821',
-    // );
+    try {
+      NotificationSettings settings = await messaging.requestPermission();
+      switch (settings.authorizationStatus) {
+        case AuthorizationStatus.authorized:
+        case AuthorizationStatus.provisional:
+          String? token = await messaging.getToken();
+          if (token != null) {
+            await box.write('x-app-pushToken', token);
+          }
+          break;
+        default:
+          await box.remove('x-app-pushToken');
+      }
+    } catch (e) {
+      FirebaseCrashlytics.instance.setCustomKey('FirebaseMessaging', e);
+    }
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      if (message.notification != null) {
+        RemoteNotification remoteNotification = message.notification!;
+        Get.snackbar(
+          remoteNotification.title ?? '',
+          remoteNotification.body ?? '',
+          colorText: Colors.white,
+          duration: const Duration(seconds: 5),
+        );
+      }
+    });
   }
 
   /// 获取设置
@@ -252,17 +192,9 @@ class AppConfig {
       data: data,
     );
     if (response.isOk) {
-      bool isAppBadgeSupported = await FlutterAppBadger.isAppBadgeSupported();
-      if (isAppBadgeSupported) {
-        await FlutterAppBadger.removeBadge();
-      }
       if (data.containsKey('installReferrer')) {
-        await box.write(
-          'installReferrer',
-          data['installReferrer']!,
-        );
+        await box.write('installReferrer', data['installReferrer']!);
       }
-      // response.result['isInReviewing'] = false;
       _setting = SettingModel.fromJson(response.result);
       if (!box.hasData('current_platform')) {
         await box.write(
@@ -270,10 +202,13 @@ class AppConfig {
           AppConfig.instance.setting.platforms.first.toJson(),
         );
       }
-      if ((setting.dailyCheckIn?.countdown ?? 0) > 0) {
-        checkInTime = DateTime.now().add(
-          Duration(milliseconds: setting.dailyCheckIn!.countdown),
+      if (setting.dailyCheckIn != null && setting.dailyCheckIn!.countdown > 0) {
+        await box.write(
+          'dailyCheckIn',
+          DateUtil.getNowDateMs() + setting.dailyCheckIn!.countdown,
         );
+      } else {
+        await box.remove('dailyCheckIn');
       }
     } else {
       _retry += 1;
@@ -282,40 +217,98 @@ class AppConfig {
     }
   }
 
-  /// 发送邮件
-  Future<void> sendEmail(String email, {String? id}) async {
-    String platform;
-    if (Platform.isAndroid) {
-      platform = android!.model;
-    } else {
-      bool canSendMail = await FlutterMailer.canSendMail();
-      if (!canSendMail) {
-        return;
+  void _purchaseStreamUpdate(List<PurchaseDetails> purchaseDetails) async {
+    for (PurchaseDetails details in purchaseDetails) {
+      if (details.pendingCompletePurchase) {
+        InAppPurchase.instance.completePurchase(details);
       }
-      platform =
-          '${ios!.utsname.machine!}/${ios!.systemName}/${ios!.systemVersion}';
+      switch (details.status) {
+        case PurchaseStatus.pending:
+          EasyLoading.show();
+          break;
+        case PurchaseStatus.purchased:
+        case PurchaseStatus.restored:
+          EasyLoading.dismiss();
+          _finishOrder(
+            transactionDate: details.transactionDate!,
+            serverVerificationData:
+                details.verificationData.serverVerificationData,
+          );
+          break;
+        case PurchaseStatus.canceled:
+          EasyLoading.dismiss();
+          break;
+        case PurchaseStatus.error:
+          EasyLoading.showToast('${details.error!.details}');
+          AppConfig.instance.analytics.logEvent(
+            name: 'purchase_error',
+            parameters: {'value': details.error.toString()},
+          );
+          break;
+        default:
+      }
     }
-    String body = '''
-${'\n' * 2}
------- Don't delete infos below ------
-uid: $udid
-platform: $platform
-version: ${AppConfig.instance.package.version}
-''';
-    if (ObjectUtil.isNotEmpty(id)) {
-      body = body.replaceFirst('uid', 'id: $id\nuid');
-    }
-    final MailOptions mailOptions = MailOptions(
-      body: body,
-      subject: '${package.appName} issues',
-      recipients: [email],
-      isHTML: false,
-    );
-    await FlutterMailer.send(mailOptions);
   }
 
-  /// 监听网络变化
-  void _onConnectivityChanged(ConnectivityResult result) {
-    connectivityResult = result;
+  /// 完成内购订单
+  Future<void> _finishOrder({
+    required String transactionDate,
+    required String serverVerificationData,
+  }) async {
+    List<String> keys = AppConfig.instance.box
+        .getKeys()
+        .where((element) => '$element'.startsWith('order_'))
+        .toList();
+    dynamic result;
+    for (var key in keys) {
+      dynamic json = jsonDecode(AppConfig.instance.box.read(key));
+      int ms = int.parse('${json['ms']}');
+      if (int.parse(transactionDate) - 180 * 1000 <= ms) {
+        result = json;
+        AppConfig.instance.box.remove(key);
+      } else {
+        LogUtil.v(
+          '数据不符合: $json',
+          tag: 'BillingClientLogic',
+        );
+      }
+    }
+    LogUtil.v(
+      '数据符合要求: $result',
+      tag: 'BillingClientLogic',
+    );
+    if (result != null) {
+      EasyLoading.show();
+      Response response = await Api().request(
+        '/Order.success',
+        data: {
+          'platform': result['platform'],
+          'orderId': result['id'],
+          'token': serverVerificationData,
+        },
+      );
+      EasyLoading.dismiss();
+      if (response.isOk) {
+        if (Get.isDialogOpen ?? false) {
+          Get
+            ..back()
+            ..dialog(
+              GeneralAlert(
+                model: GlobalTipModel(
+                  title: translate.store.purchase.title,
+                  description: translate.store.purchase.message,
+                  force: true,
+                ),
+              ),
+              useSafeArea: false,
+              barrierDismissible: false,
+            );
+        }
+      }
+    }
+  }
+
+  void dispose() {
+    _subscription?.cancel();
   }
 }

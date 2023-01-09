@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-13 13:58:06
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-12-03 16:33:40
+ * @LastEditTime: 2023-01-06 16:26:04
  * @FilePath: /tikfans2/lib/logic/buy_service.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -28,9 +28,6 @@ class BuyServiceLogic extends IGetxController {
 
   final CoinsLogic _coinsLogic = Get.find<CoinsLogic>();
   final SocialLogic _socialLogic = Get.find<SocialLogic>();
-
-  /// 支付控制器单例
-  final InAppPurchase _inAppPurchase = InAppPurchase.instance;
 
   /// 是否启用下一步
   RxBool enabled = false.obs;
@@ -90,10 +87,10 @@ class BuyServiceLogic extends IGetxController {
     EasyLoading.show();
     if (model.price == 0) {
       Response response = await Api().request(
-        'Pool.getFreeFollowers',
-        platform: _socialLogic.platform.value.platform,
+        '/Pool.getFreeFollowers',
         data: {
           'username': user.value?.username ?? controller.text,
+          'platform': _socialLogic.platform.value.platform,
         },
       );
       if (response.isOk) {
@@ -105,12 +102,12 @@ class BuyServiceLogic extends IGetxController {
       }
     } else {
       Response response = await Api().request(
-        'Pool.create',
-        platform: _socialLogic.platform.value.platform,
+        '/Pool.create',
         data: {
           'type': model.type,
           'sku': model.sku,
           'link': user.value?.username ?? controller.text,
+          'platform': _socialLogic.platform.value.platform,
         },
       );
       if (response.isOk) {
@@ -125,19 +122,19 @@ class BuyServiceLogic extends IGetxController {
 
   /// 创建内购订单
   Future<void> _createOrder() async {
-    bool isAvailable = await _inAppPurchase.isAvailable();
+    bool isAvailable = await InAppPurchase.instance.isAvailable();
     if (!isAvailable) {
       EasyLoading.showToast(translate.toast.unpurchase);
       return;
     }
     EasyLoading.show();
     Response response = await Api().request(
-      'Order.create',
-      platform: _socialLogic.platform.value.platform,
+      '/Order.create',
       data: {
         'sku': model.sku,
         'productId': model.productId,
         'link': user.value?.username ?? controller.text,
+        'platform': _socialLogic.platform.value.platform,
       },
     );
     if (response.isOk) {
@@ -157,14 +154,14 @@ class BuyServiceLogic extends IGetxController {
         ),
       );
       ProductDetailsResponse productDetailsResponse =
-          await _inAppPurchase.queryProductDetails(
+          await InAppPurchase.instance.queryProductDetails(
         {model.productId!},
       );
       if (productDetailsResponse.productDetails.isEmpty) {
         EasyLoading.showToast(translate.toast.purchasedNotFound);
         return;
       }
-      _inAppPurchase.buyConsumable(
+      InAppPurchase.instance.buyConsumable(
         purchaseParam: PurchaseParam(
           productDetails: productDetailsResponse.productDetails.first,
           applicationUserName: AppConfig.instance.udid,

@@ -2,20 +2,30 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 16:35:23
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-12-12 16:34:27
+ * @LastEditTime: 2023-01-09 14:18:20
  * @FilePath: /tikfans2/lib/logic/splash.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
+import 'package:flutter/foundation.dart';
 import 'package:tikfans2/utils/config/config.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
 import 'package:tikfans2/utils/routes/routes.dart';
 import 'package:tikfans2/widgets/general.dart';
+import 'package:unity_ads_plugin/unity_ads_plugin.dart';
 
-class SplashController extends IGetxController {
+class SplashLogic extends IGetxController {
   @override
   void onReady() async {
+    await AppConfig.instance.registerPlugin();
     await AppConfig.instance.getSettings();
+    await UnityAds.init(
+      gameId: '5022687',
+      testMode: kDebugMode,
+    );
+    for (var element in PrivacyConsentType.values) {
+      await UnityAds.setPrivacyConsent(element, true);
+    }
     _goToMain();
     super.onReady();
   }

@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-03 18:37:44
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-09-07 22:33:43
- * @FilePath: /tikfans/lib/widgets/coins.dart
+ * @LastEditTime: 2023-01-06 14:28:49
+ * @FilePath: /tikfans2/lib/widgets/coins.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -17,7 +17,7 @@ import 'package:tikfans2/widgets/button.dart';
 class CoinsButton extends StatelessWidget {
   CoinsButton({super.key});
 
-  final CoinsLogic logic = Get.put(CoinsLogic());
+  final CoinsLogic logic = Get.find<CoinsLogic>();
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 16:37:19
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-12-11 22:47:27
+ * @LastEditTime: 2023-01-06 14:28:20
  * @FilePath: /tikfans2/lib/pages/tabbar/tabbar.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -12,18 +12,19 @@ import 'package:flutter_svg/svg.dart';
 import 'package:tikfans2/logic/tabbar.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
-import 'package:tikfans2/utils/getx/view.dart';
 
-class TabBarPage extends IGetView<TabBarController> {
-  const TabBarPage({super.key});
+class TabBarPage extends StatelessWidget {
+  TabBarPage({super.key});
+
+  final TabBarLogic logic = Get.find<TabBarLogic>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
-        controller: controller.pageController,
-        children: controller.children,
+        controller: logic.controller,
+        children: logic.children,
       ),
       bottomNavigationBar: bottomNavigationBarBuilder(),
     );
@@ -32,9 +33,9 @@ class TabBarPage extends IGetView<TabBarController> {
   Widget bottomNavigationBarBuilder() {
     return Obx(() {
       return _BottomNavigationBar(
-        index: controller.cIndex.value,
-        onTap: controller.onTap,
-        labels: controller.labels,
+        index: logic.cIndex.value,
+        onTap: logic.onTap,
+        labels: logic.labels,
       );
     });
   }

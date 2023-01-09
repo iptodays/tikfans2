@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-04 10:25:19
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-10-06 10:01:53
- * @FilePath: /tikfans/lib/pages/daily/daily.dart
+ * @LastEditTime: 2023-01-06 14:58:33
+ * @FilePath: /tikfans2/lib/pages/daily/daily.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -14,8 +14,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:slide_countdown/slide_countdown.dart';
 import 'package:styled_text/styled_text.dart';
-import 'package:tikfans2/logic/coins.dart';
-import 'package:tikfans2/logic/setting.dart';
+import 'package:tikfans2/logic/daily.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/config/config.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
@@ -26,14 +25,11 @@ import 'package:tikfans2/widgets/scaffold.dart';
 class DailyPage extends StatelessWidget {
   DailyPage({super.key});
 
-  final SettingLogic settingLogic = Get.find<SettingLogic>();
-
-  final CoinsLogic coinsLogic = Get.find<CoinsLogic>();
+  final DailyLogic logic = Get.find<DailyLogic>();
 
   @override
   Widget build(BuildContext context) {
     return IScaffold(
-      onInit: settingLogic.verifyCheckIn,
       appBar: IAppBar(
         title: Text(translate.daily.title),
         actions: [
@@ -55,83 +51,88 @@ class DailyPage extends StatelessWidget {
   }
 
   Widget grilleBuilder() {
+    List<Widget> list = [];
+    for (var i = 0;
+        i < AppConfig.instance.setting.dailyCheckIn!.rewards.length;
+        i++) {
+      list.add(Container(
+        height: 78,
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        decoration: BoxDecoration(
+          color: HexColor('#262C44'),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: HexColor('#343C5B'),
+            width: 1,
+          ),
+        ),
+        child: Obx(
+          () {
+            bool checked = logic.checkedInDays.value >= i + 1;
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'DAY ${i + 1}',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: 12,
+                  ),
+                ),
+                SizedBox(
+                  width: 28,
+                  height: 28,
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Opacity(
+                        opacity: checked ? 0.2 : 1,
+                        child: Image.asset('assets/img/universal/coins.png'),
+                      ),
+                      Visibility(
+                        visible: checked,
+                        child: Icon(
+                          Icons.check_rounded,
+                          color: HexColor('#81F0B8'),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                AutoSizeText(
+                  '${AppConfig.instance.setting.dailyCheckIn!.rewards[i]}',
+                  maxLines: 1,
+                  minFontSize: 10,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white.withOpacity(
+                      checked ? 0.2 : 1,
+                    ),
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ));
+    }
     return StaggeredGrid.count(
       crossAxisCount: 5,
       mainAxisSpacing: 20,
       crossAxisSpacing: 20,
-      children: AppConfig.instance.setting.dailyCheckIn!.rewards.map(
-        (e) {
-          return Container(
-            height: 78,
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            decoration: BoxDecoration(
-              color: HexColor('#262C44'),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: HexColor('#343C5B'),
-                width: 1,
-              ),
-            ),
-            child: Obx(
-              () {
-                bool checked = settingLogic.checkedInDays.value >
-                    AppConfig.instance.setting.dailyCheckIn!.rewards.indexOf(e);
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SizedBox(
-                      width: 28,
-                      height: 28,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Opacity(
-                            opacity: checked ? 0.2 : 1,
-                            child: Image.asset(
-                              'assets/img/universal/coins.png',
-                            ),
-                          ),
-                          Visibility(
-                            visible: checked,
-                            child: Image.asset(
-                              'assets/img/universal/checked.png',
-                              width: 12,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    AutoSizeText(
-                      '$e',
-                      maxLines: 1,
-                      minFontSize: 10,
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white.withOpacity(
-                          checked ? 0.2 : 1,
-                        ),
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                );
-              },
-            ),
-          );
-        },
-      ).toList(),
+      children: list,
     );
   }
 
   Widget checkInBuilder() {
     return Padding(
       padding: const EdgeInsets.all(40),
-      child: Obx(() {
-        return IButton(
-          onTap:
-              settingLogic.hasCheckedIn.isTrue ? null : coinsLogic.dailyCheckIn,
-          child: Opacity(
-            opacity: settingLogic.hasCheckedIn.isTrue ? 0.4 : 1,
+      child: IButton(
+        onTap: logic.checkIn,
+        child: Obx(() {
+          return Opacity(
+            opacity: logic.enabled.isFalse ? 0.4 : 1,
             child: Container(
               height: 44,
               alignment: Alignment.center,
@@ -145,21 +146,20 @@ class DailyPage extends StatelessWidget {
               ),
               child: Builder(
                 builder: (_) {
-                  if (settingLogic.hasCheckedIn.isTrue) {
+                  if (logic.enabled.isFalse) {
                     return SlideCountdown(
                       slideDirection: SlideDirection.none,
                       decoration: const BoxDecoration(),
                       duration: Duration(
-                        milliseconds: AppConfig
-                                .instance.checkInTime!.millisecondsSinceEpoch -
-                            DateUtil.getNowDateMs(),
+                        milliseconds:
+                            AppConfig.instance.box.read('dailyCheckIn') -
+                                DateUtil.getNowDateMs(),
                       ),
                       textStyle: const TextStyle(
                         fontSize: 16,
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
                       ),
-                      onDone: settingLogic.resetCheckIn,
                     );
                   }
                   return AutoSizeText(
@@ -175,9 +175,9 @@ class DailyPage extends StatelessWidget {
                 },
               ),
             ),
-          ),
-        );
-      }),
+          );
+        }),
+      ),
     );
   }
 

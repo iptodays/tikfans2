@@ -2,7 +2,7 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-01 15:21:41
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-12-12 16:46:29
+ * @LastEditTime: 2023-01-09 14:07:17
  * @FilePath: /tikfans2/lib/main.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
@@ -39,7 +39,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'TikFans',
+      title: 'TikFollower',
       debugShowCheckedModeBanner: false,
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: LocaleSettings.supportedLocales,

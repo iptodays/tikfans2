@@ -3,7 +3,7 @@
  * @Date: 2022-09-04 14:11:07
  * @LastEditors: iptoday wangdong1221@outlook.com
  * @LastEditTime: 2022-09-30 14:39:40
- * @FilePath: /tikfans/lib/pages/about/about.dart
+ * @FilePath: /tikfans2/lib/pages/about/about.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */

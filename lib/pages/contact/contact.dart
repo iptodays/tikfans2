@@ -2,13 +2,16 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-06 14:06:49
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-09-06 14:29:35
- * @FilePath: /tikfans/lib/pages/contact/contact.dart
+ * @LastEditTime: 2023-01-06 16:22:27
+ * @FilePath: /tikfans2/lib/pages/contact/contact.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
+import 'dart:io';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mailer/flutter_mailer.dart';
 import 'package:tikfans2/models/contact.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/config/config.dart';
@@ -37,9 +40,9 @@ class ContactUsPage extends StatelessWidget {
           ContactModel model = AppConfig.instance.setting.contacts[index];
           return itemBuilder(
             name: model.key,
-            onTap: () {
+            onTap: () async {
               if (model.key.toLowerCase() == 'email') {
-                AppConfig.instance.sendEmail(model.value);
+                sendEmail(model.value);
               } else {
                 launchUrlString(
                   model.value,
@@ -83,5 +86,34 @@ class ContactUsPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> sendEmail(String value) async {
+    String platform;
+    if (Platform.isAndroid) {
+      platform = AppConfig.instance.android.model;
+    } else {
+      bool canSendMail = await FlutterMailer.canSendMail();
+      if (!canSendMail) {
+        return;
+      }
+      platform =
+          '${AppConfig.instance.ios.utsname.machine!}/${AppConfig.instance.ios.systemName}/${AppConfig.instance.ios.systemVersion}';
+    }
+    String body = '''
+${'\n' * 2}
+------ Don't delete infos below ------
+uid: ${AppConfig.instance.udid}
+platform: $platform
+version: ${AppConfig.instance.package.version}
+''';
+
+    final MailOptions mailOptions = MailOptions(
+      body: body,
+      subject: '${AppConfig.instance.package.appName} issues',
+      recipients: [value],
+      isHTML: false,
+    );
+    await FlutterMailer.send(mailOptions);
   }
 }

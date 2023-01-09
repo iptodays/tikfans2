@@ -2,22 +2,22 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-19 22:33:05
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-09-21 21:41:25
- * @FilePath: /tikfans/lib/widgets/ad_floating_ball.dart
+ * @LastEditTime: 2023-01-06 15:52:33
+ * @FilePath: /tikfans2/lib/widgets/ad_floating_ball.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:tikfans2/logic/ad.dart';
+import 'package:tikfans2/logic/ad_task.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
 import 'package:tikfans2/widgets/button.dart';
 
 class ADFloatingBallView extends StatelessWidget {
   ADFloatingBallView({super.key});
 
-  final ADLogic logic = Get.put(ADLogic());
+  final ADTaskLogic logic = Get.find<ADTaskLogic>();
 
   @override
   Widget build(BuildContext context) {

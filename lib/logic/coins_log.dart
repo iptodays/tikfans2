@@ -2,8 +2,8 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-19 17:24:15
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-10-10 10:40:58
- * @FilePath: /tikfans/lib/logic/coins_log.dart
+ * @LastEditTime: 2023-01-06 15:40:02
+ * @FilePath: /tikfans2/lib/logic/coins_log.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
@@ -31,9 +31,7 @@ class CoinsLogLogic extends IGetxController {
   Future<void> loadData() async {
     Response response = await Api().request(
       '/CoinLog.getCoinLogs',
-      data: {
-        'page': '$_page',
-      },
+      data: {'page': '$_page'},
     );
     if (loading.isTrue) {
       loading.toggle();

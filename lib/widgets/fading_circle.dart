@@ -3,7 +3,7 @@
  * @Date: 2022-09-19 16:56:36
  * @LastEditors: iptoday wangdong1221@outlook.com
  * @LastEditTime: 2022-09-19 17:05:12
- * @FilePath: /tikfans/lib/widgets/fading_circle.dart
+ * @FilePath: /tikfans2/lib/widgets/fading_circle.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */

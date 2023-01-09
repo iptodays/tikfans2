@@ -2,25 +2,23 @@
  * @Author: iptoday wangdong1221@outlook.com
  * @Date: 2022-09-03 14:55:03
  * @LastEditors: iptoday wangdong1221@outlook.com
- * @LastEditTime: 2022-10-17 20:25:26
- * @FilePath: /tikfans/lib/pages/task/task.dart
+ * @LastEditTime: 2023-01-07 19:55:29
+ * @FilePath: /tikfans2/lib/pages/task/task.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:styled_text/styled_text.dart';
 import 'package:tikfans2/logic/task.dart';
 import 'package:tikfans2/models/pool.dart';
 import 'package:tikfans2/pages/task/widgets/banner.dart';
+import 'package:tikfans2/pages/task/widgets/execution.dart';
 import 'package:tikfans2/pages/task/widgets/not_login.dart';
+import 'package:tikfans2/pages/task/widgets/skip.dart';
 import 'package:tikfans2/pages/task/widgets/tip.dart';
 import 'package:tikfans2/pages/task/widgets/user.dart';
 import 'package:tikfans2/strings/strings.g.dart';
 import 'package:tikfans2/utils/getx/getx.dart';
-import 'package:tikfans2/widgets/button.dart';
 import 'package:tikfans2/widgets/coins.dart';
 import 'package:tikfans2/widgets/image.dart';
 import 'package:tikfans2/widgets/platform_horizontal.dart';
@@ -29,7 +27,7 @@ import 'package:tikfans2/widgets/scaffold.dart';
 class TaskPage extends StatelessWidget {
   TaskPage({super.key});
 
-  final TaskLogic logic = Get.put(TaskLogic());
+  final TaskLogic logic = Get.find<TaskLogic>();
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +67,7 @@ class TaskPage extends StatelessWidget {
                       if (logic.socialLogic.user.value == null) {
                         return NotLoginView();
                       }
-                      if (logic.list.isEmpty) {
+                      if (logic.list.isEmpty && logic.model.value == null) {
                         return Center(
                           child: Text(
                             translate.task.noTask,
@@ -116,31 +114,25 @@ class TaskPage extends StatelessWidget {
               height: Get.width - 168,
               child: Obx(
                 () {
-                  return PageView.builder(
-                    controller: logic.controller,
-                    itemCount: logic.list.length,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (_, index) {
-                      PoolModel model = logic.list[index];
-                      bool isLike = model.type == 'like';
-                      Widget image = AspectRatio(
-                        aspectRatio: isLike ? 0.7 : 1,
-                        child: IImage(
-                          model.image,
-                          height: double.maxFinite,
-                        ),
-                      );
-                      return Center(
-                        child: isLike
-                            ? ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: image,
-                              )
-                            : ClipOval(
-                                child: image,
-                              ),
-                      );
-                    },
+                  if (logic.model.value == null) {
+                    return const SizedBox();
+                  }
+                  PoolModel model = logic.model.value!;
+                  Widget image = AspectRatio(
+                    aspectRatio: model.type == 'like' ? 0.7 : 1,
+                    child: IImage(
+                      model.image,
+                      height: double.maxFinite,
+                    ),
+                  );
+                  if (model.type == 'like') {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: image,
+                    );
+                  }
+                  return ClipOval(
+                    child: image,
                   );
                 },
               ),
@@ -158,105 +150,12 @@ class TaskPage extends StatelessWidget {
       height: 44,
       child: Row(
         children: [
-          _Skip(
-            onTap: () {
-              if (!EasyLoading.isShow) {
-                logic.nextTask();
-              }
-            },
-          ),
+          SkipWidget(),
           const SizedBox(width: 16),
           Expanded(
-            child: Obx(() {
-              PoolModel model = logic.list[logic.index.value];
-              return _Action(
-                onTap: logic.launch,
-                type: model.type,
-                coins: model.reward,
-              );
-            }),
+            child: ExecutionWidget(),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _Skip extends StatelessWidget {
-  final VoidCallback? onTap;
-
-  const _Skip({this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return IButton(
-      onTap: onTap,
-      child: Container(
-        width: 110,
-        alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(horizontal: 8),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22),
-          color: HexColor('#262C44'),
-        ),
-        child: AutoSizeText(
-          Translations.of(context).task.skip,
-          minFontSize: 10,
-          maxLines: 1,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _Action extends StatelessWidget {
-  final VoidCallback onTap;
-
-  final String type;
-
-  final int coins;
-
-  const _Action({
-    required this.onTap,
-    required this.type,
-    required this.coins,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return IButton(
-      onTap: onTap,
-      child: Container(
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22),
-          color: HexColor('#4135FF'),
-        ),
-        child: StyledText(
-          text:
-              '${Translations.of(context)['task.$type']} +$coins<coins></coins>',
-          tags: {
-            'coins': StyledTextWidgetTag(
-              Padding(
-                padding: const EdgeInsets.only(left: 6),
-                child: Image.asset(
-                  'assets/img/universal/coins.png',
-                  width: 20,
-                ),
-              ),
-            ),
-          },
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
       ),
     );
   }

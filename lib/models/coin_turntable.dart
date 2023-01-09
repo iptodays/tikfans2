@@ -3,7 +3,7 @@
  * @Date: 2022-09-04 15:08:33
  * @LastEditors: iptoday wangdong1221@outlook.com
  * @LastEditTime: 2022-09-24 21:31:16
- * @FilePath: /tikfans/lib/models/coin_turntable.dart
+ * @FilePath: /tikfans2/lib/models/coin_turntable.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */

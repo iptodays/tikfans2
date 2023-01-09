@@ -3,7 +3,7 @@
  * @Date: 2022-09-06 19:28:09
  * @LastEditors: iptoday wangdong1221@outlook.com
  * @LastEditTime: 2022-09-06 22:48:26
- * @FilePath: /tikfans/lib/pages/wheel/widgets/triangle_indicator.dart
+ * @FilePath: /tikfans2/lib/pages/wheel/widgets/triangle_indicator.dart
  * 
  * Copyright (c) 2022 by iptoday wangdong1221@outlook.com, All Rights Reserved. 
  */

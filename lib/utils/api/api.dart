@@ -16,11 +16,11 @@ class Api {
     if (Platform.isAndroid) {
       os = 'android';
       deviceInfo =
-          '$os/${AppConfig.instance.android!.brand}/${AppConfig.instance.android!.model}/${AppConfig.instance.android!.version.release}';
+          '$os/${AppConfig.instance.android.brand}/${AppConfig.instance.android.model}/${AppConfig.instance.android.version.release}';
     } else if (Platform.isIOS) {
       os = 'ios';
       deviceInfo =
-          '$os/${AppConfig.instance.ios!.utsname.machine}/${AppConfig.instance.ios!.systemVersion}';
+          '$os/${AppConfig.instance.ios.utsname.machine}/${AppConfig.instance.ios.systemVersion}';
     }
     _options = BaseOptions(
         baseUrl: 'https://api.tikfans2.xyz',
@@ -52,15 +52,19 @@ class Api {
   /// onlyCycle: 当前App生命周期内仅请求一次
   Future<Response> request(
     String url, {
-    dynamic data,
-    String platform = 'tiktok',
+    Map<String, String?>? data,
   }) async {
+    if (data == null) {
+      data = {'platform': 'tiktok'};
+    } else if (!data.containsKey('platform')) {
+      data['platform'] = 'tiktok';
+    }
     Response response;
     try {
       response = await _dio.request(
         url,
         options: Options(
-          headers: {'x-app-platform': platform},
+          headers: {'x-app-platform': data['platform']},
         ),
         data: data,
       );
